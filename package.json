@@ -1,0 +1,22 @@
+{
+  "name": "itiproject---ecommerce",
+  "version": "1.0.0",
+  "description": "eCommerce project for ITI Members: Omar, Tarek, Nizar",
+  "main": "modules\\main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OmarDerwy/ITIProject-eCommerce.git"
+  },
+  "author": "Team Nizar,Omar,Tarek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OmarDerwy/ITIProject-eCommerce/issues"
+  },
+  "homepage": "https://github.com/OmarDerwy/ITIProject-eCommerce#readme",
+  "dependencies": {
+    "tailwind": "^4.0.0"
+  }
+}
