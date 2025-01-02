@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/OmarDerwy/ITIProject-eCommerce#readme",
   "dependencies": {
-    "tailwindcss": "^3.4.17"
+    "bootstrap": "^5.3.3"
   }
 }
