@@ -3,17 +3,17 @@ let numberOfbedrooms = document.getElementById("bedrooms");
 let location = document.getElementById("location");
 let type = document.getElementById("type");
 
-let countainer = [];
+let container = [];
 
-fetch("./modules/data.json")
+fetch("./assets/properties.json")
   .then((res) => res.json())
   .then((data) => {
-    countainer = data;
+    container = data;
 
   })
   .catch((err) => {
     console.error("Error fetching data:", err);
-    countainer = [];
+    container = [];
   });
 
 export function filterData() {
@@ -22,10 +22,10 @@ export function filterData() {
   let locationData = "New York";
   let typeData = "";
 
-  let filteredData = countainer.filter((item) => {
+  let filteredData = container.filter((item) => {
     return (
-      (BathroomsData === "" || BathroomsData == item.bathrooms) &&
-      (bedroomsData === "" || bedroomsData == item.bedrooms) &&
+      (BathroomsData === "" || BathroomsData == item.no_of_bathrooms) &&
+      (bedroomsData === "" || bedroomsData == item.no_of_bedrooms) &&
       (locationData === "" || locationData == item.location) &&
       (typeData === "" || typeData == item.type)
     );
