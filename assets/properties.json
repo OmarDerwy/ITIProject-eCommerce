@@ -1,0 +1,251 @@
+[
+    {
+      "id": "001",
+      "type": "Apartment",
+      "poster_name": "Jane Smith",
+      "company_logo": "https://example.com/logo1.png",
+      "pictures": [
+        "https://picsum.photos/250",
+        "https://picsum.photos/250"
+      ],
+      "features": ["Balcony", "Gym", "Parking"],
+      "phone_number": "+201234567890",
+      "email": "janesmith@example.com",
+      "no_of_bedrooms": 2,
+      "no_of_bathrooms": 1,
+      "size": "88.3 sq m",
+      "floorplan": [
+        "https://example.com/floorplan1.jpg"
+      ],
+      "map_coordinates": {
+        "latitude": 40.785091,
+        "longitude": -73.968285
+      },
+      "location": "New York, Central Park"
+    },
+    {
+      "id": "002",
+      "type": "Villa",
+      "poster_name": "Ahmed Ali",
+      "company_logo": "https://example.com/logo2.png",
+      "pictures": [
+        "https://picsum.photos/250",
+        "https://picsum.photos/250",
+        "https://picsum.photos/250"
+      ],
+      "features": ["Garden", "Swimming Pool", "Garage"],
+      "phone_number": "+201112223344",
+      "email": "ahmedali@example.com",
+      "no_of_bedrooms": 5,
+      "no_of_bathrooms": 4,
+      "size": "325.2 sq m",
+      "floorplan": [
+        "https://example.com/villa_floorplan1.jpg"
+      ],
+      "map_coordinates": {
+        "latitude": 34.052235,
+        "longitude": -118.243683
+      },
+      "location": "Los Angeles, Beverly Hills"
+    },
+    {
+      "id": "003",
+      "type": "Studio",
+      "poster_name": "Emily Johnson",
+      "company_logo": "https://example.com/logo3.png",
+      "pictures": [
+        "https://picsum.photos/250",
+        "https://picsum.photos/250",
+        "https://picsum.photos/250"
+      ],
+      "features": ["Furnished", "High-speed Internet"],
+      "phone_number": "+201445566778",
+      "email": "emilyj@example.com",
+      "no_of_bedrooms": 1,
+      "no_of_bathrooms": 1,
+      "size": "41.8 sq m",
+      "floorplan": [
+        "https://example.com/studio_floorplan1.jpg"
+      ],
+      "map_coordinates": {
+        "latitude": 51.507222,
+        "longitude": -0.1275
+      },
+      "location": "London, Westminster"
+    },
+    {
+      "id": "004",
+      "type": "Townhouse",
+      "poster_name": "Michael Brown",
+      "company_logo": "https://example.com/logo4.png",
+      "pictures": [
+        "https://picsum.photos/250",
+        "https://picsum.photos/250",
+        "https://picsum.photos/250"
+      ],
+      "features": ["Terrace", "Storage Room", "Community Pool"],
+      "phone_number": "+201998877665",
+      "email": "michaelb@example.com",
+      "no_of_bedrooms": 4,
+      "no_of_bathrooms": 3,
+      "size": "204.4 sq m",
+      "floorplan": [
+        "https://example.com/townhouse_floorplan1.jpg"
+      ],
+      "map_coordinates": {
+        "latitude": 48.856613,
+        "longitude": 2.352222
+      },
+      "location": "Paris, Montmartre"
+    },
+    {
+      "id": "005",
+      "type": "Penthouse",
+      "poster_name": "Sophia Wilson",
+      "company_logo": "https://example.com/logo5.png",
+      "pictures": [
+        "https://picsum.photos/250",
+        "https://picsum.photos/250",
+        "https://picsum.photos/250"
+      ],
+      "features": ["Rooftop Terrace", "Private Elevator", "Jacuzzi"],
+      "phone_number": "+201776655443",
+      "email": "sophiaw@example.com",
+      "no_of_bedrooms": 3,
+      "no_of_bathrooms": 3,
+      "size": "260.1 sq m",
+      "floorplan": [
+        "https://example.com/penthouse_floorplan1.jpg"
+      ],
+      "map_coordinates": {
+        "latitude": 35.689487,
+        "longitude": 139.691711
+      },
+      "location": "Tokyo, Shibuya"
+    },
+    {
+      "id": "006",
+      "type": "Office Space",
+      "poster_name": "David Lee",
+      "company_logo": "https://example.com/logo6.png",
+      "pictures": [
+        "https://picsum.photos/250",
+        "https://picsum.photos/250",
+        "https://picsum.photos/250"
+      ],
+      "features": ["Conference Room", "High-speed Internet", "Pantry"],
+      "phone_number": "+201223344556",
+      "email": "davidl@example.com",
+      "no_of_bedrooms": 0,
+      "no_of_bathrooms": 2,
+      "size": "139.4 sq m",
+      "floorplan": [
+        "https://example.com/office_floorplan1.jpg"
+      ],
+      "map_coordinates": {
+        "latitude": 37.774929,
+        "longitude": -122.419418
+      },
+      "location": "San Francisco, Financial District"
+    },
+    {
+      "id": "007",
+      "type": "Apartment",
+      "poster_name": "Olivia Martinez",
+      "company_logo": "https://example.com/logo7.png",
+      "pictures": [
+        "https://picsum.photos/250",
+        "https://picsum.photos/250",
+        "https://picsum.photos/250"
+      ],
+      "features": ["Swimming Pool", "24/7 Security"],
+      "phone_number": "+201332211445",
+      "email": "oliviam@example.com",
+      "no_of_bedrooms": 3,
+      "no_of_bathrooms": 2,
+      "size": "111.5 sq m",
+      "floorplan": [
+        "https://example.com/apartment_floorplan2.jpg"
+      ],
+      "map_coordinates": {
+        "latitude": 41.902782,
+        "longitude": 12.496366
+      },
+      "location": "Rome, Trastevere"
+    },
+    {
+      "id": "008",
+      "type": "Retail Space",
+      "poster_name": "Emma Garcia",
+      "company_logo": "https://example.com/logo8.png",
+      "pictures": [
+        "https://picsum.photos/250",
+        "https://picsum.photos/250",
+        "https://picsum.photos/250"
+      ],
+      "features": ["Prime Location", "Parking", "Large Windows"],
+      "phone_number": "+201665544332",
+      "email": "emmag@example.com",
+      "no_of_bedrooms": 0,
+      "no_of_bathrooms": 1,
+      "size": "74.3 sq m",
+      "floorplan": [
+        "https://example.com/retail_floorplan1.jpg"
+      ],
+      "map_coordinates": {
+        "latitude": 34.693737,
+        "longitude": 135.502167
+      },
+      "location": "Osaka, Umeda"
+    },
+    {
+      "id": "009",
+      "type": "Villa",
+      "poster_name": "Liam White",
+      "company_logo": "https://example.com/logo9.png",
+      "pictures": [
+        "https://picsum.photos/250",
+        "https://picsum.photos/250",
+        "https://picsum.photos/250"
+      ],
+      "features": ["Private Garden", "Maid's Room", "Garage"],
+      "phone_number": "+201887766554",
+      "email": "liamw@example.com",
+      "no_of_bedrooms": 6,
+      "no_of_bathrooms": 5,
+      "size": "371.6 sq m",
+      "floorplan": [
+        "https://example.com/villa_floorplan2.jpg"
+      ],
+      "map_coordinates": {
+        "latitude": 55.755825,
+        "longitude": 37.617298
+      },
+      "location": "Moscow, Arbat"
+    },
+    {
+      "id": "010",
+      "type": "Penthouse",
+      "poster_name": "Sophia Williams",
+      "company_logo": "https://example.com/logo10.png",
+      "pictures": [
+        "https://picsum.photos/250",
+        "https://picsum.photos/250",
+        "https://picsum.photos/250"
+      ],
+      "features": ["Rooftop Pool", "City View", "Private Elevator"],
+      "phone_number": "+201554433221",
+      "email": "sophiawilliams@example.com",
+      "no_of_bedrooms": 4,
+      "no_of_bathrooms": 4,
+      "size": "278.7 sq m",
+      "floorplan": [
+        "https://example.com/penthouse_floorplan2.jpg"
+      ],
+      "map_coordinates": {
+        "latitude": 39.904202,
+        "longitude": 116.407394
+      },
+      "location": "Beijing, Chaoyang"
+    }
+  ]
