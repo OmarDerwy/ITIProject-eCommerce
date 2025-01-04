@@ -1,5 +1,5 @@
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
-
+import filteredData from "./search.js"
 //loop through locations in properties.json and create p elements under .property-container
 
 

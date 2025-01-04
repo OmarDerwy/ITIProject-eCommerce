@@ -1,4 +1,4 @@
-import {filterData} from './search.js'
+import filterData from './search.js'
 
 
 document.getElementById("search_btn").addEventListener("click", ()=>{

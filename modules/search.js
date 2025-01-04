@@ -16,10 +16,10 @@ fetch("./assets/properties.json")
     container = [];
   });
 
-export function filterData() {
+export default function filterData() {
   let BathroomsData ="" ;
   let bedroomsData ="" ;
-  let locationData = "New York";
+  let locationData = "";
   let typeData = "";
 
   let filteredData = container.filter((item) => {
