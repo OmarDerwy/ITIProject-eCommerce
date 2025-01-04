@@ -5,8 +5,8 @@
       "poster_name": "Jane Smith",
       "company_logo": "https://example.com/logo1.png",
       "pictures": [
-        "https://example.com/pic1.jpg",
-        "https://example.com/pic2.jpg"
+        "https://picsum.photos/250",
+        "https://picsum.photos/250"
       ],
       "features": ["Balcony", "Gym", "Parking"],
       "phone_number": "+201234567890",
@@ -29,9 +29,9 @@
       "poster_name": "Ahmed Ali",
       "company_logo": "https://example.com/logo2.png",
       "pictures": [
-        "https://example.com/villa1.jpg",
-        "https://example.com/villa2.jpg",
-        "https://example.com/villa3.jpg"
+        "https://picsum.photos/250",
+        "https://picsum.photos/250",
+        "https://picsum.photos/250"
       ],
       "features": ["Garden", "Swimming Pool", "Garage"],
       "phone_number": "+201112223344",
@@ -54,8 +54,9 @@
       "poster_name": "Emily Johnson",
       "company_logo": "https://example.com/logo3.png",
       "pictures": [
-        "https://example.com/studio1.jpg",
-        "https://example.com/studio2.jpg"
+        "https://picsum.photos/250",
+        "https://picsum.photos/250",
+        "https://picsum.photos/250"
       ],
       "features": ["Furnished", "High-speed Internet"],
       "phone_number": "+201445566778",
@@ -78,9 +79,9 @@
       "poster_name": "Michael Brown",
       "company_logo": "https://example.com/logo4.png",
       "pictures": [
-        "https://example.com/townhouse1.jpg",
-        "https://example.com/townhouse2.jpg",
-        "https://example.com/townhouse3.jpg"
+        "https://picsum.photos/250",
+        "https://picsum.photos/250",
+        "https://picsum.photos/250"
       ],
       "features": ["Terrace", "Storage Room", "Community Pool"],
       "phone_number": "+201998877665",
@@ -103,8 +104,9 @@
       "poster_name": "Sophia Wilson",
       "company_logo": "https://example.com/logo5.png",
       "pictures": [
-        "https://example.com/penthouse1.jpg",
-        "https://example.com/penthouse2.jpg"
+        "https://picsum.photos/250",
+        "https://picsum.photos/250",
+        "https://picsum.photos/250"
       ],
       "features": ["Rooftop Terrace", "Private Elevator", "Jacuzzi"],
       "phone_number": "+201776655443",
@@ -127,8 +129,9 @@
       "poster_name": "David Lee",
       "company_logo": "https://example.com/logo6.png",
       "pictures": [
-        "https://example.com/office1.jpg",
-        "https://example.com/office2.jpg"
+        "https://picsum.photos/250",
+        "https://picsum.photos/250",
+        "https://picsum.photos/250"
       ],
       "features": ["Conference Room", "High-speed Internet", "Pantry"],
       "phone_number": "+201223344556",
@@ -151,8 +154,9 @@
       "poster_name": "Olivia Martinez",
       "company_logo": "https://example.com/logo7.png",
       "pictures": [
-        "https://example.com/apartment3.jpg",
-        "https://example.com/apartment4.jpg"
+        "https://picsum.photos/250",
+        "https://picsum.photos/250",
+        "https://picsum.photos/250"
       ],
       "features": ["Swimming Pool", "24/7 Security"],
       "phone_number": "+201332211445",
@@ -175,8 +179,9 @@
       "poster_name": "Emma Garcia",
       "company_logo": "https://example.com/logo8.png",
       "pictures": [
-        "https://example.com/retail1.jpg",
-        "https://example.com/retail2.jpg"
+        "https://picsum.photos/250",
+        "https://picsum.photos/250",
+        "https://picsum.photos/250"
       ],
       "features": ["Prime Location", "Parking", "Large Windows"],
       "phone_number": "+201665544332",
@@ -199,8 +204,9 @@
       "poster_name": "Liam White",
       "company_logo": "https://example.com/logo9.png",
       "pictures": [
-        "https://example.com/villa4.jpg",
-        "https://example.com/villa5.jpg"
+        "https://picsum.photos/250",
+        "https://picsum.photos/250",
+        "https://picsum.photos/250"
       ],
       "features": ["Private Garden", "Maid's Room", "Garage"],
       "phone_number": "+201887766554",
@@ -223,8 +229,9 @@
       "poster_name": "Sophia Williams",
       "company_logo": "https://example.com/logo10.png",
       "pictures": [
-        "https://example.com/penthouse3.jpg",
-        "https://example.com/penthouse4.jpg"
+        "https://picsum.photos/250",
+        "https://picsum.photos/250",
+        "https://picsum.photos/250"
       ],
       "features": ["Rooftop Pool", "City View", "Private Elevator"],
       "phone_number": "+201554433221",
