@@ -1,7 +1,6 @@
 :root{
 
     /* color variables */
-
     /* dark colors */
     /* Used For: headings, tiltles, paragraphes */
     --primary-1: #1E1E1E;
@@ -19,6 +18,11 @@
     --white: #FFFEFF;
     --wheat: #9F8D87;
     --yellow: #FEC80C;
+
+    /* Gradient */
+    --gradient-primary: linear-gradient(270, var(var(--primary-3)), var(var(--primary-2)));
+    --gradient-secondry: linear-gradient(270, var(--secondry-3) 0%, var(--secondry-2) 100%);
+
 
 
     /* TEXT */
@@ -41,15 +45,19 @@
     /* Font Family */
     --heading-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     --body-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
+    --logo-font-family: 'Playwrite Australia Tasmania Guides';
     /* Letter Spacing */
-
+    --letter-spacing-wide: 0.5px;
+    --letter-spacing-medium: 0.35px;
+    --letter-spacing-small: 0.25px;
+    --letter-spacing-narrow: -1px;
 
 
     /* Radius */
     --radius-small: 8px;
     --radius-medium: 12px;
-    --radius-large: 16px;
+    --radius-large: 18px;
+    --radius-extra-large: 30px;
     --radius-circle: 50%;
 
 
@@ -62,6 +70,14 @@
     --transition-duration-quick: 250ms;
     --transition-duration-medium: 500ms;
     --transition-duration-slow: 750ms;
+}
+
+/* --------------------------------END OF VARIABLES --------------------------------- */
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
 }
 
 html {
@@ -114,8 +130,8 @@ input, button, select{
 
 button{
     cursor: none;
-}
 
+}
 
 
 h1, h2, h3, h4, h5, h6 {
@@ -128,7 +144,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font-family);
     font-weight: 700;
     line-height: 1.2;
-    letter-spacing: 0.25px;
+    letter-spacing: var(--letter-spacing-small);
 }
 
 .headline-medium {
@@ -136,7 +152,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font-family);
     font-weight: 600;
     line-height: 1.3;
-    letter-spacing: 0.25px;
+    letter-spacing:  var(--letter-spacing-small);
 }
 
 .title-large {
@@ -144,7 +160,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font-family);
     font-weight: 600;
     line-height: 1.4;
-    letter-spacing: 0.25px;
+    letter-spacing: var(--letter-spacing-small);
 }
 
 .title-medium {
@@ -152,7 +168,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font-family);
     font-weight: 500;
     line-height: 1.5;
-    letter-spacing: 0.25px;
+    letter-spacing:  var(--letter-spacing-small);
 }
 
 .body-large{
@@ -160,9 +176,141 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--body-font-family);
     font-weight: 400;
     line-height: 1.5;
-    letter-spacing: 0.35px;
+    letter-spacing:  var(--letter-spacing-medium);
 }
 
 .body-medium{
     font-size: var(--fontsize-lable-large);
+}
+
+
+/* --------------------------------------------- NAV BAR ------------------------------------------------- */
+.nav-bar{
+    z-index: 100;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0px auto;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.nav-bar .logo{
+    font-size: var(--fontsize-title-small);
+    font-weight: bold;
+    letter-spacing: var(--letter-spacing-narrow);
+    font-style: italic;
+    font-family: var(--logo-font-family);
+}
+
+.nav-bar a:hover{
+    color: var(--secondry-2);
+}
+
+.links{
+    display: flex;
+    gap: 2rem;
+    letter-spacing: var(--letter-spacing-small);
+    font-weight: bold;
+}
+
+.toggle-btn{
+    color: var(--secondry-1);
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+header{
+    position: relative;
+    padding: 0 2rem;
+}
+
+.get-started-btn{
+    background-color: #ec4f4f;
+    color: var(--primary-2);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-large);
+    border: 1px var(--primary-2) solid;
+    outline: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: scale var(--transition-duration-medium) ease;
+    /* text-align: center; */
+    
+}
+
+.get-started-btn:hover{
+    scale: 1.05;
+    color: var(--primary-2);
+}
+
+.get-started-btn:active{
+    scale: 0.9;
+}
+
+.dropdown-menu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 65px;
+    height: 0px;
+    width: 300px;
+    background: var(--primary-3);
+    backdrop-filter: blur(15px);
+    border-radius: var(--radius-large);
+    overflow: hidden;
+}
+
+.dropdown-menu.open{
+    height: 240px;
+}
+
+.dropdown-menu li {
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown-menu .get-started-btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* ------------------------------------------- HERO SECTION ------------------------------------------------------- */
+/* .hero-section{
+    background-color: var(--secondry-3);
+    height: 100vh;
+    background-image: url();
+    background-position: center;
+    background-size: cover;
+} */
+
+
+
+
+/* ----------------------------------------- Responsive Design ------------------------------------------------------ */
+@media(max-width: 992px) {
+    .nav-bar .links, .nav-bar .get-started-btn {
+        display: none;
+    }
+    
+    .nav-bar .toggle-btn{
+        display: block;
+    }
+
+    .dropdown-menu{
+        display: block;
+    }
+}
+
+@media(max-width: 450px) {
+    .dropdown-menu{
+        left: 2rem;
+        width: unset;
+    }
 }
