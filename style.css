@@ -88,6 +88,8 @@ html {
 
 body{
     background-color: var(--primary-3);
+    height: 5000px;
+    position: relative;
 }
 
 /* scroll-bar styling  */
@@ -136,7 +138,7 @@ button{
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font-family);
-    color: var(--primary-1); 
+    color: var(--primary-3); 
 }
 
 .headline-large {
@@ -293,6 +295,85 @@ header{
 
 
 
+/* ------------------------------------------- about-us-section ------------------------------------------------------- */
+
+.about-us-section {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  
+/* Heading Styles */
+.about-us-heading {
+    font-family: var(--heading-font-family);
+    letter-spacing: var(--letter-spacing-wide);
+    color: var(--primary-1);
+    font-weight: 900;
+  }
+  
+  /* Text Content Styles */
+  .about-us-text {
+    font-family: var(--body-font-family);
+    font-size: var(--fontsize-label-medium); 
+    letter-spacing: var(--letter-spacing-small);
+    line-height: 1.6;
+    margin-bottom: 1rem; /* Added margin to separate sections */
+  }
+  
+  /* Credits Style */
+  .about-us-credits {
+    font-family: var(--body-font-family);
+    font-size: var(--fontsize-label-medium); 
+    color: var(--primary-3); /* Ensured color is consistent */
+    margin-top: 0.5rem;
+  }
+  
+  /* Highlight Style */
+  .highlight {
+    color: var(--secondry-1);
+  }
+  
+  /* List Styles */
+  .explore-list,
+  .services-list,
+  .quick-links-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* List Items Styles */
+  .explore-item,
+  .service-item,
+  .quick-link-item {
+    font-size: var(--fontsize-label-medium);
+    margin-bottom: 12px; /* Increased margin for better spacing */
+    display: flex; 
+    align-items: center; /* Ensures icons align properly with text */
+  }
+  
+  /* Icon Styles */
+  .explore-item i,
+  .service-item i,
+  .quick-link-item i {
+    color: var(--secondry-2);
+    margin-right: 10px; 
+  }
+  
+  /* Quick Links Styling */
+  .quick-link {
+    color: var(--primary-1);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color var(--transition-duration-medium); /* Added transition for hover effect */
+  }
+  
+  .quick-link:hover {
+    color: var(--secondry-2); /* Hover effect */
+  }
+  
+  .copy-right strong{
+    color: var(--secondry-2);
+  }
 /* ----------------------------------------- Responsive Design ------------------------------------------------------ */
 @media(max-width: 992px) {
     .nav-bar .links, .nav-bar .get-started-btn {
@@ -314,3 +395,5 @@ header{
         width: unset;
     }
 }
+
+
