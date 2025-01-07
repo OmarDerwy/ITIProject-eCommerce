@@ -88,10 +88,16 @@ html {
 
 body{
     background-color: var(--primary-3);
-    height: 5000px;
-    position: relative;
+    /* height: 5000px; */
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
+main{
+    flex: 1;
+}
 /* scroll-bar styling  */
 
 ::-webkit-scrollbar{
@@ -100,7 +106,7 @@ body{
 
 /* styling the scroll bar track (the undraggable part) */
 ::-webkit-scrollbar-track{
-    background-color: var(--primary-2);
+    background-color: var(--primary-3);
     border-radius: var(--radius-small); 
 }
 
@@ -129,6 +135,10 @@ input, button, select{
     font: inherit;
     border: none;
 }
+.btn-primary{
+    background-color: var(--secondry-1);
+    border: none;
+}
 
 button{
     cursor: none;
@@ -138,7 +148,7 @@ button{
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font-family);
-    color: var(--primary-3); 
+    color: var(--primary-1); 
 }
 
 .headline-large {
