@@ -1,5 +1,5 @@
 :root{
-
+    
     /* color variables */
     /* dark colors */
     /* Used For: headings, tiltles, paragraphes */
@@ -23,8 +23,6 @@
     --gradient-primary: linear-gradient(270, var(var(--primary-3)), var(var(--primary-2)));
     --gradient-secondry: linear-gradient(270, var(--secondry-3) 0%, var(--secondry-2) 100%);
 
-
-
     /* TEXT */
     /* Font Size */
     --fontsize-heading-large: 3.6rem;    /* 57.6px */
@@ -41,7 +39,6 @@
     --fontsize-lable-medium: 1.2rem;    /* 19.2px */
 
 
-
     /* Font Family */
     --heading-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     --body-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -52,14 +49,12 @@
     --letter-spacing-small: 0.25px;
     --letter-spacing-narrow: -1px;
 
-
     /* Radius */
     --radius-small: 8px;
     --radius-medium: 12px;
     --radius-large: 18px;
     --radius-extra-large: 30px;
     --radius-circle: 50%;
-
 
     /* Shadows */
     --shadow-1: 0px 2px 4px 0px var(--primary-3);
@@ -71,9 +66,7 @@
     --transition-duration-medium: 500ms;
     --transition-duration-slow: 750ms;
 }
-
-/* --------------------------------END OF VARIABLES --------------------------------- */
-
+/* ----------------------------------------------END OF VARIABLES -------------------------------------------- */
 * {
     box-sizing: border-box;
     margin: 0px;
@@ -145,11 +138,18 @@ button{
 
 }
 
+h1{
+    font-family: var(--heading-font-family);
+    color: var(--primary-1); 
+    text-transform: uppercase;
 
-h1, h2, h3, h4, h5, h6 {
+}
+
+h2, h3, h4, h5, h6 {
     font-family: var(--heading-font-family);
     color: var(--primary-1); 
 }
+
 
 .headline-large {
     font-size: var(--fontsize-heading-large);
@@ -205,6 +205,7 @@ h1, h2, h3, h4, h5, h6 {
     height: 60px;
     display: flex;
     align-items: center;
+    
     justify-content: space-between;
     
 }
@@ -256,7 +257,7 @@ header{
 
 .get-started-btn:hover{
     scale: 1.05;
-    color: var(--primary-2);
+    color: var(--primary-1);
 }
 
 .get-started-btn:active{
@@ -267,17 +268,20 @@ header{
     display: none;
     position: absolute;
     right: 2rem;
-    top: 65px;
+    top: 0px;
     height: 0px;
     width: 300px;
     background: var(--primary-3);
     backdrop-filter: blur(15px);
     border-radius: var(--radius-large);
+    border: none;
     overflow: hidden;
 }
 
 .dropdown-menu.open{
-    height: 240px;
+    top: 65px;
+    height: 270px;
+    border: 1px var(--primary-2) solid ;
 }
 
 .dropdown-menu li {
@@ -294,13 +298,110 @@ header{
 }
 
 /* ------------------------------------------- HERO SECTION ------------------------------------------------------- */
-/* .hero-section{
+.hero-section{
     background-color: var(--secondry-3);
     height: 100vh;
     background-image: url();
     background-position: center;
     background-size: cover;
-} */
+    display: flex;
+    overflow: hidden;
+    
+}
+
+.hero-section-1{
+    width: 500px;
+    height:500px;
+    justify-content: center;
+}
+
+
+
+
+/* ------------------------------------------------------- Login page -----------------------------------------------------*/
+.login-container {
+    margin: 2rem auto;
+    text-align: center;
+    align-items: center;
+    background-color: var(--white);
+    box-shadow: var(--shadow-1);
+    padding: 2rem;
+    max-width: 50rem;
+    border: 0.5px solid var(--primary-2);
+    border-radius: var(--radius-large);
+}
+
+.login-container h3{
+    text-transform: capitalize;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+.login-container a{
+    color: var(--secondry-1);
+}
+
+.login-container label{
+    width: 100%;
+    text-align: left;
+    margin-bottom: 0.4rem;
+    text-transform: capitalize;
+    font-weight: 600;
+
+}
+
+.login-container a:hover{
+    text-decoration: underline;
+}
+
+.form-control:focus {
+    border-color: var(--primary);
+    outline: none;
+    box-shadow: 0 0 5px var(--primary);
+}
+
+
+.btn-login{
+    background-color: var(--secondry-1);
+    color: var(--white);
+    width: 90%;
+}
+
+.btn-login:hover{
+    background-color: var(--primary-2);
+    color: var(--white);
+    transition: background-color 1.5s, color 1.5s, transform 0.75s;
+    transform: scale(1.05);
+    transform-origin: center;
+}
+.login-container hr{
+    flex: 1; 
+    border: none; 
+    border-top: 2px solid var(--primary-2);
+    margin: 0 10px;
+}
+
+#forgotPass{
+    width: 100%;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .login-container {
+        padding: 1rem;
+        max-width: 90%;
+    }
+}
+
+
+/* ----------------------------------- Bussiness Partners (Sliding) -------------------------------------------------*/
+
+
+
+
+
+
+
 
 
 
@@ -385,6 +486,7 @@ header{
     color: var(--secondry-2);
   }
 /* ----------------------------------------- Responsive Design ------------------------------------------------------ */
+/* ---------------------------------------------- Nav Bar ------------------------------------------------------------*/
 @media(max-width: 992px) {
     .nav-bar .links, .nav-bar .get-started-btn {
         display: none;
