@@ -1,511 +1,454 @@
-:root{
-    
-    /* color variables */
-    /* dark colors */
-    /* Used For: headings, tiltles, paragraphes */
-    --primary-1: #1E1E1E;
-    --primary-2: #2A2A2A;
-    --primary-3: #D9D9D9;
+:root {
+  /* color variables */
+  /* dark colors */
+  /* Used For: headings, tiltles, paragraphes */
+  --primary-1: #1e1e1e;
+  --primary-2: #2a2a2a;
+  --primary-3: #d9d9d9;
 
-    /* secondry colors  */
-    /* Used For: buttons, borders and decorations*/
-    --secondry-1: #FF4343;
-    --secondry-2: #ec4f4f;
-    --secondry-3: #9F8D87;
+  /* secondry colors  */
+  /* Used For: buttons, borders and decorations*/
+  --secondry-1: #ff4343;
+  --secondry-2: #ec4f4f;
+  --secondry-3: #9f8d87;
 
-    /* light colors */
-    /* Used For:  */
-    --white: #FFFEFF;
-    --wheat: #9F8D87;
-    --yellow: #FEC80C;
+  /* light colors */
+  /* Used For:  */
+  --white: #fffeff;
+  --wheat: #9f8d87;
+  --yellow: #fec80c;
 
-    /* Gradient */
-    --gradient-primary: linear-gradient(270, var(var(--primary-3)), var(var(--primary-2)));
-    --gradient-secondry: linear-gradient(270, var(--secondry-3) 0%, var(--secondry-2) 100%);
+  /* Gradient */
+  --gradient-primary: linear-gradient(
+    270,
+    var(var(--primary-3)),
+    var(var(--primary-2))
+  );
+  --gradient-secondry: linear-gradient(
+    270,
+    var(--secondry-3) 0%,
+    var(--secondry-2) 100%
+  );
 
-    /* TEXT */
-    /* Font Size */
-    --fontsize-heading-large: 3.6rem;    /* 57.6px */
-    --fontsize-heading-medium: 2.8rem;     /* 44.8px */
+  /* TEXT */
+  /* Font Size */
+  --fontsize-heading-large: 3.6rem; /* 57.6px */
+  --fontsize-heading-medium: 2.8rem; /* 44.8px */
 
-    --fontsize-title-large: 2.25rem;     /* 36px */    
-    --fontsize-title-medium: 1.8rem;     /* 32px */
-    --fontsize-title-small: 1.6rem;     /* 28.8px */
+  --fontsize-title-large: 2.25rem; /* 36px */
+  --fontsize-title-medium: 1.8rem; /* 32px */
+  --fontsize-title-small: 1.6rem; /* 28.8px */
 
-    --fontsize-body-large: 1.6rem;      /* 25.6px */
-    --fontsize-body-medium: 1.4rem;     /* 22.4px */
+  --fontsize-body-large: 1.6rem; /* 25.6px */
+  --fontsize-body-medium: 1.4rem; /* 22.4px */
 
-    --fontsize-lable-large: 1.4rem;     /* 22.4px */
-    --fontsize-lable-medium: 1.2rem;    /* 19.2px */
+  --fontsize-lable-large: 1.4rem; /* 22.4px */
+  --fontsize-lable-medium: 1.2rem; /* 19.2px */
 
+  /* Font Family */
+  --heading-font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  --body-font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  --logo-font-family: "Playwrite Australia Tasmania Guides";
+  /* Letter Spacing */
+  --letter-spacing-wide: 0.5px;
+  --letter-spacing-medium: 0.35px;
+  --letter-spacing-small: 0.25px;
+  --letter-spacing-narrow: -1px;
 
-    /* Font Family */
-    --heading-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    --body-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    --logo-font-family: 'Playwrite Australia Tasmania Guides';
-    /* Letter Spacing */
-    --letter-spacing-wide: 0.5px;
-    --letter-spacing-medium: 0.35px;
-    --letter-spacing-small: 0.25px;
-    --letter-spacing-narrow: -1px;
+  /* Radius */
+  --radius-small: 8px;
+  --radius-medium: 12px;
+  --radius-large: 18px;
+  --radius-extra-large: 30px;
+  --radius-circle: 50%;
 
-    /* Radius */
-    --radius-small: 8px;
-    --radius-medium: 12px;
-    --radius-large: 18px;
-    --radius-extra-large: 30px;
-    --radius-circle: 50%;
+  /* Shadows */
+  --shadow-1: 0px 2px 4px 0px var(--primary-3);
+  --shadow-2: 0px 5px 10px 0px var(--primary-3);
+  --shadow-3: 0px 10px 20px 0px var(--primary-3);
 
-    /* Shadows */
-    --shadow-1: 0px 2px 4px 0px var(--primary-3);
-    --shadow-2: 0px 5px 10px 0px var(--primary-3);
-    --shadow-3: 0px 10px 20px 0px var(--primary-3);
-
-    /* Transition */
-    --transition-duration-quick: 250ms;
-    --transition-duration-medium: 500ms;
-    --transition-duration-slow: 750ms;
+  /* Transition */
+  --transition-duration-quick: 250ms;
+  --transition-duration-medium: 500ms;
+  --transition-duration-slow: 750ms;
 }
 /* ----------------------------------------------END OF VARIABLES -------------------------------------------- */
 * {
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
 }
 
 html {
-    font-size: 16px; /* Default font size */
-    scroll-behavior: smooth;
-
+  font-size: 16px; /* Default font size */
+  scroll-behavior: smooth;
 }
 
-body{
-    background-color: var(--primary-3);
-    /* height: 5000px; */
-    /* position: relative; */
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+body {
+  background-color: var(--primary-3);
+  /* height: 5000px; */
+  /* position: relative; */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-main{
-    flex: 1;
+main {
+  flex: 1;
 }
 /* scroll-bar styling  */
 
-::-webkit-scrollbar{
-    width: var(--radius-medium)/* modifing the scroll bar width */
+::-webkit-scrollbar {
+  width: var(--radius-medium); /* modifing the scroll bar width */
 }
 
 /* styling the scroll bar track (the undraggable part) */
-::-webkit-scrollbar-track{
-    background-color: var(--primary-3);
-    border-radius: var(--radius-small); 
+::-webkit-scrollbar-track {
+  background-color: var(--primary-3);
+  border-radius: var(--radius-small);
 }
 
 /* styling the dragable part of the scroll bar */
-::-webkit-scrollbar-thumb{
-    background-color: var(--primary-1); /* changing the color of the dragable part of the scroll bar */
-    border-radius: var(--radius-small); /* creating a rounded corners to the draggable part */
+::-webkit-scrollbar-thumb {
+  background-color: var(
+    --primary-1
+  ); /* changing the color of the dragable part of the scroll bar */
+  border-radius: var(
+    --radius-small
+  ); /* creating a rounded corners to the draggable part */
 }
 
-::-webkit-scrollbar-thumb:hover{
-    background-color: var(--secondry-1); /* changing the color of the dragable part of the scroll bar to darcker color on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(
+    --secondry-1
+  ); /* changing the color of the dragable part of the scroll bar to darcker color on hover */
 }
 
-li{
-    list-style: none;
+li {
+  list-style: none;
 }
 
 /* to remove the default underline of the links and the blue color */
-a{
-    text-decoration: none;
-    color: inherit;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-input, button, select{
-    background: none;
-    font: inherit;
-    border: none;
+input,
+button,
+select {
+  background: none;
+  font: inherit;
+  border: none;
 }
-.btn-primary{
-    background-color: var(--secondry-1);
-    border: none;
-}
-
-button{
-    cursor: none;
-
+.btn-primary {
+  background-color: var(--secondry-1);
+  border: none;
 }
 
-h1{
-    font-family: var(--heading-font-family);
-    color: var(--primary-1); 
-    text-transform: uppercase;
-
+button {
+  cursor: none;
 }
 
-h2, h3, h4, h5, h6 {
-    font-family: var(--heading-font-family);
-    color: var(--primary-1); 
+h1 {
+  font-family: var(--heading-font-family);
+  color: var(--primary-1);
+  text-transform: uppercase;
 }
 
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font-family);
+  color: var(--primary-1);
+}
 
 .headline-large {
-    font-size: var(--fontsize-heading-large);
-    font-family: var(--heading-font-family);
-    font-weight: 700;
-    line-height: 1.2;
-    letter-spacing: var(--letter-spacing-small);
+  font-size: var(--fontsize-heading-large);
+  font-family: var(--heading-font-family);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: var(--letter-spacing-small);
 }
 
 .headline-medium {
-    font-size: var(--fontsize-heading-medium);
-    font-family: var(--heading-font-family);
-    font-weight: 600;
-    line-height: 1.3;
-    letter-spacing:  var(--letter-spacing-small);
+  font-size: var(--fontsize-heading-medium);
+  font-family: var(--heading-font-family);
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: var(--letter-spacing-small);
 }
 
 .title-large {
-    font-size: var(--fontsize-title-large);
-    font-family: var(--heading-font-family);
-    font-weight: 600;
-    line-height: 1.4;
-    letter-spacing: var(--letter-spacing-small);
+  font-size: var(--fontsize-title-large);
+  font-family: var(--heading-font-family);
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: var(--letter-spacing-small);
 }
 
 .title-medium {
-    font-size: var(--fontsize-title-medium);
-    font-family: var(--heading-font-family);
-    font-weight: 500;
-    line-height: 1.5;
-    letter-spacing:  var(--letter-spacing-small);
+  font-size: var(--fontsize-title-medium);
+  font-family: var(--heading-font-family);
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: var(--letter-spacing-small);
 }
 
-.body-large{
-    font-size: var(--fontsize-title-small);
-    font-family: var(--body-font-family);
-    font-weight: 400;
-    line-height: 1.5;
-    letter-spacing:  var(--letter-spacing-medium);
+.body-large {
+  font-size: var(--fontsize-title-small);
+  font-family: var(--body-font-family);
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: var(--letter-spacing-medium);
 }
 
-.body-medium{
-    font-size: var(--fontsize-lable-large);
+.body-medium {
+  font-size: var(--fontsize-lable-large);
 }
-
 
 /* --------------------------------------------- NAV BAR ------------------------------------------------- */
-.nav-bar{
-    z-index: 100;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0px auto;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    
-    justify-content: space-between;
-    
+.nav-bar {
+  z-index: 100;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0px auto;
+  height: 60px;
+  display: flex;
+  align-items: center;
+
+  justify-content: space-between;
 }
 
-.nav-bar .logo{
-    font-size: var(--fontsize-title-small);
-    font-weight: bold;
-    letter-spacing: var(--letter-spacing-narrow);
-    font-style: italic;
-    font-family: var(--logo-font-family);
+.nav-bar .logo {
+  font-size: var(--fontsize-title-small);
+  font-weight: bold;
+  letter-spacing: var(--letter-spacing-narrow);
+  font-style: italic;
+  font-family: var(--logo-font-family);
 }
 
-.nav-bar a:hover{
-    color: var(--secondry-2);
+.nav-bar a:hover {
+  color: var(--secondry-2);
 }
 
-.links{
-    display: flex;
-    gap: 2rem;
-    letter-spacing: var(--letter-spacing-small);
-    font-weight: bold;
+.links {
+  display: flex;
+  gap: 2rem;
+  letter-spacing: var(--letter-spacing-small);
+  font-weight: bold;
 }
 
-.toggle-btn{
-    color: var(--secondry-1);
-    font-size: 1.5rem;
-    cursor: pointer;
-    display: none;
+.toggle-btn {
+  color: var(--secondry-1);
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
 }
 
-header{
-    position: relative;
-    padding: 0 2rem;
+header {
+  position: relative;
+  padding: 0 2rem;
 }
 
-.get-started-btn{
-    background-color: #ec4f4f;
-    color: var(--primary-2);
-    padding: 0.5rem 1rem;
-    border-radius: var(--radius-large);
-    border: 1px var(--primary-2) solid;
-    outline: none;
-    font-size: 0.8rem;
-    font-weight: 600;
-    transition: scale var(--transition-duration-medium) ease;
-    /* text-align: center; */
-    
+.get-started-btn {
+  background-color: #ec4f4f;
+  color: var(--primary-2);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-large);
+  border: 1px var(--primary-2) solid;
+  outline: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: scale var(--transition-duration-medium) ease;
+  /* text-align: center; */
 }
 
-.get-started-btn:hover{
-    scale: 1.05;
-    color: var(--primary-1);
+.get-started-btn:hover {
+  scale: 1.05;
+  color: var(--primary-1);
 }
 
-.get-started-btn:active{
-    scale: 0.9;
+.get-started-btn:active {
+  scale: 0.9;
 }
 
-.dropdown-menu{
-    display: none;
-    position: absolute;
-    right: 2rem;
-    top: 0px;
-    height: 0px;
-    width: 300px;
-    background: var(--primary-3);
-    backdrop-filter: blur(15px);
-    border-radius: var(--radius-large);
-    border: none;
-    overflow: hidden;
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 2rem;
+  top: 0px;
+  height: 0px;
+  width: 300px;
+  background: var(--primary-3);
+  backdrop-filter: blur(15px);
+  border-radius: var(--radius-large);
+  border: none;
+  overflow: hidden;
 }
 
-.dropdown-menu.open{
-    top: 65px;
-    height: 270px;
-    border: 1px var(--primary-2) solid ;
+.dropdown-menu.open {
+  top: 65px;
+  height: 270px;
+  border: 1px var(--primary-2) solid;
 }
 
 .dropdown-menu li {
-    padding: 0.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: var(--letter-spacing-small);
+  font-weight: bold;
 }
 
-.dropdown-menu .get-started-btn{
-    width: 100%;
-    display: flex;
-    justify-content: center;
+.dropdown-menu li:hover{
+  color: var(--secondry-2);
+  transition: background-color 1.5s, color 0.25s, transform 0.75s;
+  transform: scale(1.05);
+  transform-origin: center;
+}
+
+.dropdown-menu .get-started-btn {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  background-color: var(--secondry-1);
+  color: var(--primary-2);
+  transition: background-color 1.5s, color 0.25s, transform 0.5s;
+  transform: scale(1.05);
+  transform-origin: center;
+}
+
+.dropdown-menu .get-started-btn:hover {
+  background-color: var(--primary-2);
+  color: var(--white);
+
 }
 
 /* ------------------------------------------- HERO SECTION ------------------------------------------------------- */
-.hero-section{
-    background-color: var(--secondry-3);
-    height: 100vh;
-    background-image: url();
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    overflow: hidden;
-    
+.hero-section {
+  background-color: var(--secondry-3);
+  height: 100vh;
+  background-image: url();
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  overflow: hidden;
 }
 
-.hero-section-1{
-    width: 500px;
-    height:500px;
-    justify-content: center;
+.hero-section-1 {
+  width: 500px;
+  height: 500px;
+  justify-content: center;
 }
 
-
-
-
-/* ------------------------------------------------------- Login page -----------------------------------------------------*/
-.login-container {
-    margin: 2rem auto;
-    text-align: center;
-    align-items: center;
-    background-color: var(--white);
-    box-shadow: var(--shadow-1);
-    padding: 2rem;
-    max-width: 50rem;
-    border: 0.5px solid var(--primary-2);
-    border-radius: var(--radius-large);
-}
-
-.login-container h3{
-    text-transform: capitalize;
-    text-transform: capitalize;
-    font-weight: 500;
-}
-
-.login-container a{
-    color: var(--secondry-1);
-}
-
-.login-container label{
-    width: 100%;
-    text-align: left;
-    margin-bottom: 0.4rem;
-    text-transform: capitalize;
-    font-weight: 600;
-
-}
-
-.login-container a:hover{
-    text-decoration: underline;
-}
-
-.form-control:focus {
-    border-color: var(--primary);
-    outline: none;
-    box-shadow: 0 0 5px var(--primary);
-}
-
-
-.btn-login{
-    background-color: var(--secondry-1);
-    color: var(--white);
-    width: 90%;
-}
-
-.btn-login:hover{
-    background-color: var(--primary-2);
-    color: var(--white);
-    transition: background-color 1.5s, color 1.5s, transform 0.75s;
-    transform: scale(1.05);
-    transform-origin: center;
-}
-.login-container hr{
-    flex: 1; 
-    border: none; 
-    border-top: 2px solid var(--primary-2);
-    margin: 0 10px;
-}
-
-#forgotPass{
-    width: 100%;
-    text-align: left;
-}
-
-@media (max-width: 768px) {
-    .login-container {
-        padding: 1rem;
-        max-width: 90%;
-    }
-}
-
-
-/* ----------------------------------- Bussiness Partners (Sliding) -------------------------------------------------*/
-
-
-
-
-
-
-
-
-
-
+/* ------------------------------------- Bussiness Partners (Sliding) --------------------------------------------------*/
 
 /* ------------------------------------------- about-us-section ------------------------------------------------------- */
 
 .about-us-section {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  }
-  
-  
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
 /* Heading Styles */
 .about-us-heading {
-    font-family: var(--heading-font-family);
-    letter-spacing: var(--letter-spacing-wide);
-    color: var(--primary-1);
-    font-weight: 900;
-  }
-  
-  /* Text Content Styles */
-  .about-us-text {
-    font-family: var(--body-font-family);
-    font-size: var(--fontsize-label-medium); 
-    letter-spacing: var(--letter-spacing-small);
-    line-height: 1.6;
-    margin-bottom: 1rem; /* Added margin to separate sections */
-  }
-  
-  /* Credits Style */
-  .about-us-credits {
-    font-family: var(--body-font-family);
-    font-size: var(--fontsize-label-medium); 
-    color: var(--primary-3); /* Ensured color is consistent */
-    margin-top: 0.5rem;
-  }
-  
-  /* Highlight Style */
-  .highlight {
-    color: var(--secondry-1);
-  }
-  
-  /* List Styles */
-  .explore-list,
-  .services-list,
-  .quick-links-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  /* List Items Styles */
-  .explore-item,
-  .service-item,
-  .quick-link-item {
-    font-size: var(--fontsize-label-medium);
-    margin-bottom: 12px; /* Increased margin for better spacing */
-    display: flex; 
-    align-items: center; /* Ensures icons align properly with text */
-  }
-  
-  /* Icon Styles */
-  .explore-item i,
-  .service-item i,
-  .quick-link-item i {
-    color: var(--secondry-2);
-    margin-right: 10px; 
-  }
-  
-  /* Quick Links Styling */
-  .quick-link {
-    color: var(--primary-1);
-    text-decoration: none;
-    font-weight: bold;
-    transition: color var(--transition-duration-medium); /* Added transition for hover effect */
-  }
-  
-  .quick-link:hover {
-    color: var(--secondry-2); /* Hover effect */
-  }
-  
-  .copy-right strong{
-    color: var(--secondry-2);
-  }
+  font-family: var(--heading-font-family);
+  letter-spacing: var(--letter-spacing-wide);
+  color: var(--primary-1);
+  font-weight: 900;
+}
+
+/* Text Content Styles */
+.about-us-text {
+  font-family: var(--body-font-family);
+  font-size: var(--fontsize-label-medium);
+  letter-spacing: var(--letter-spacing-small);
+  line-height: 1.6;
+  margin-bottom: 1rem; /* Added margin to separate sections */
+}
+
+/* Credits Style */
+.about-us-credits {
+  font-family: var(--body-font-family);
+  font-size: var(--fontsize-label-medium);
+  color: var(--primary-3); /* Ensured color is consistent */
+  margin-top: 0.5rem;
+}
+
+/* Highlight Style */
+.highlight {
+  color: var(--secondry-1);
+}
+
+/* List Styles */
+.explore-list,
+.services-list,
+.quick-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* List Items Styles */
+.explore-item,
+.service-item,
+.quick-link-item {
+  font-size: var(--fontsize-label-medium);
+  margin-bottom: 12px; /* Increased margin for better spacing */
+  display: flex;
+  align-items: center; /* Ensures icons align properly with text */
+}
+
+/* Icon Styles */
+.explore-item i,
+.service-item i,
+.quick-link-item i {
+  color: var(--secondry-2);
+  margin-right: 10px;
+}
+
+/* Quick Links Styling */
+.quick-link {
+  color: var(--primary-1);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color var(--transition-duration-medium); /* Added transition for hover effect */
+}
+
+.quick-link:hover {
+  color: var(--secondry-2); /* Hover effect */
+}
+
+.copy-right strong {
+  color: var(--secondry-2);
+}
+
+
 /* ----------------------------------------- Responsive Design ------------------------------------------------------ */
 /* ---------------------------------------------- Nav Bar ------------------------------------------------------------*/
-@media(max-width: 992px) {
-    .nav-bar .links, .nav-bar .get-started-btn {
-        display: none;
-    }
-    
-    .nav-bar .toggle-btn{
-        display: block;
-    }
+@media (max-width: 992px) {
+  .nav-bar .links,
+  .nav-bar .get-started-btn {
+    display: none;
+  }
 
-    .dropdown-menu{
-        display: block;
-    }
+  .nav-bar .toggle-btn {
+    display: block;
+  }
+
+  .dropdown-menu {
+    display: block;
+  }
 }
 
-@media(max-width: 450px) {
-    .dropdown-menu{
-        left: 2rem;
-        width: unset;
-    }
+@media (max-width: 450px) {
+  .dropdown-menu {
+    left: 2rem;
+    width: unset;
+  }
 }
-
-

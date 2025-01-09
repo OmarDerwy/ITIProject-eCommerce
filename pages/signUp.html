@@ -18,6 +18,7 @@
     
     <!-- link to css -->
     <link href="../style.css" rel="stylesheet">
+    <link href="Login-SignUp.css" rel="stylesheet">
 
 </head>
 <body>
@@ -55,89 +56,85 @@
             </div>
     </header>
 
+<!-- Sign Up Box -->
+        <div class="login-container">
+        <form action="" method="post">
+            <div class="mb-5">
+                <h3>Sign up for a new account</h3>
+            </div>
 
-    <div class="login-container">
-      <form action="" method="post">
-          
-          <div class="mb-5">
-              <h3>Sign up for a new account</h3>
-          </div>
-      
-
+        <div class="input-group mb-3">
+        <label for="username">Username<span class="text-danger"> *</span></label>
+        <span class="input-group-text" id="basic-addon1">@</span>
+        <input  type="text" 
+                class="form-control" 
+                placeholder="Enter a Username" 
+                aria-label="Username" 
+                aria-describedby="basic-addon1"
+                id="username">
+        </div>
+        <div id="usernameError" class="form-text text-danger"></div>
+        
         <div class="mb-4">
-        <label for="exampleInputEmail1">Email Address</label>
+        <label for="email">Email Address<span class="text-danger"> *</span></label>
         <input placeholder="Enter your E-mail" 
                     type="email" 
                     class="form-control" 
-                    id="exampleInputEmail1" 
+                    id="email" 
                     aria-describedby="emailHelp"
-                    name="email"
-                    required
-                    maxlength="50">
+                    name="email">
         </div>
+        <div id="emailError" class="form-text text-danger"></div>
 
-          <div class="mb-4">
-          <label for="exampleInputEmail1">Email Address</label>
-          <input placeholder="Enter your E-mail" 
-                    type="email" 
-                    class="form-control" 
-                    id="exampleInputEmail1" 
-                    aria-describedby="emailHelp"
-                    name="email"
-                    required
-                    maxlength="50">
-          </div>
-  
-          
-          <div class="mb-4">
-            <label for="exampleInputPassword1">Password</label>
+        <div class="mb-4">
+            <label for="password">Password<span class="text-danger"> *</span></label>
             <input type="password" 
                     class="form-control" 
-                    id="exampleInputPassword1"
+                    id="password"
                     name="password"
-                    required
-                    maxlength="50"
-                    minlength="8"
                     placeholder="Enter your password">
-          </div>
+        </div>
+        <div id="passwordError" class="form-text text-danger"></div>
 
-          
-          <div class="mb-4">
-            <label for="exampleInputPassword2">Confirm Password</label>
+        <div class="mb-4">
+            <label for="confirmPassword">Confirm Password <span class="text-danger"> *</span></label>
             <input type="password" 
                     class="form-control" 
-                    id="exampleInputPassword2"
+                    id="confirmPassword"
                     name="confirmPassword"
-                    required
                     maxlength="50"
                     minlength="8"
                     placeholder="Confirm your password">
-          </div>
-          
+        </div>
+        <div id="matchingPasswordError" class="form-text text-danger"></div>
+        
         <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="autoSizingCheck2">
-            <label class="form-check-label" for="autoSizingCheck2">
-              I have read <span><a href="#">terms & conditions</a></span>
+            <input  onchange=validateTerms() 
+                    class="form-check-input" 
+                    type="checkbox" 
+                    id="terms">
+            <label class="form-check-label" for="terms">
+            I have read <span><a href="#">terms & conditions</a></span>
             </label> 
         </div>
+        <div id="termsError" class="form-text text-danger"></div>
+        
         <button type="submit" 
-                  value="register"
-                  name="login" 
-                  class="btn btn-login my-2 mb-">
-                  Sign up
+                value="register"
+                name="login" 
+                class="btn btn-login my-2 mb-">
+                Sign up
         </button>
-          
-          <p>
-              <div style="display: flex; align-items: center; text-align: center;">
-                  <hr >
-                  <span>Or</span>
-                  <hr>
-              </div>
-              <span class="mx-1">Already have an account?</span><a href="login.html">Sign in instead</a> 
-          </p>
-      
-      </form>
-  </div>
+        <p>
+            <div style="display: flex; align-items: center; text-align: center;">
+                <hr >
+                <span>Or</span>
+                <hr>
+            </div>
+            <span class="mx-1">Already have an account?</span><a href="login.html">Sign in instead</a> 
+        </p>
+    </form>
+</div>
 
 
 
@@ -205,5 +202,6 @@
 </footer>
 <script src="../modules/main.js"></script>
 <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> 
+<script src="signUpValidation.js"></script>
 </body>
 </html>

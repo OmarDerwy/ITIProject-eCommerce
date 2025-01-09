@@ -18,6 +18,7 @@
     
     <!-- link to css -->
     <link href="../style.css" rel="stylesheet">
+    <link href="Login-SignUp.css" rel="stylesheet">
 
 </head>
 <body>
@@ -32,13 +33,13 @@
             </div>
             
             <ul class="links" style="margin-bottom:0px;">
-                <li><a href="#hero-section">HOME</a></li>
-                <li><a href="#properties-section">PROPERTIES</a></li>
-                <li><a href="#about-us-section">ABOUT US</a></li>
-                <li><a href="#services-section">OUR SERVIECES</a></li>
-                <li><a href="contact-us-section">CONTACT US</a></li>
+                <li><a href="../index.html/#hero-section">HOME</a></li>
+                <li><a href="../index.html/#properties-section">PROPERTIES</a></li>
+                <li><a href="../index.html/#about-us-section">ABOUT US</a></li>
+                <li><a href="../index.html/#services-section">OUR SERVIECES</a></li>
+                <li><a href="../index.html/#contact-us-section">CONTACT US</a></li>
             </ul>
-            <a href="./signUp.html" class="get-started-btn">Sign up</a>
+            <a href="signUp.html" class="get-started-btn">Sign Up</a>
 
             <div class="toggle-btn">
                 <i class="fa-solid fa-bars"></i>
@@ -51,132 +52,127 @@
                 <li><a href="#about-us-section">ABOUT US</a></li>
                 <li><a href="#services-section">OUR SERVIECES</a></li>
                 <li><a href="contact-us-section">CONTACT US</a></li>
-                <li><a href="./signUp.html" class="get-started-btn">Sign up</a></li>
+                <li><a href="login.html" class="get-started-btn">Login</a></li>
             </div>
     </header>
-
-
+    
+    <!-- Login Box -->
     <div class="login-container">
-      <form action="" method="post">
-          
-          <div class="mb-5">
-              <h3>Welcome Back</h3>
-          </div>
-      
-          <div class="mb-4">
-          <label for="exampleInputEmail1">Email Address</label>
-          <input placeholder="Enter your E-mail" 
-                    type="email" 
+        <form action="" method="post">
+            
+            <div class="mb-5">
+                <h3>Welcome Back</h3>
+            </div>
+        
+            <div class="input-group mb-3">
+            <label for="username">Username<span class="text-danger"> *</span></label>
+            <span class="input-group-text" id="basic-addon1">@</span>
+            <input  type="text" 
                     class="form-control" 
-                    id="exampleInputEmail1" 
-                    aria-describedby="emailHelp"
-                    name="email"
-                    required
-                    maxlength="50">
-          </div>
-  
-          <label for="exampleInputPassword1">Password</label>
-          <div class="mb-2">
-            <input type="password" 
-                    class="form-control" 
-                    id="exampleInputPassword1"
-                    name="password"
-                    required
-                    maxlength="50"
-                    minlength="8"
-                    placeholder="Enter your password">
-          </div>
-          <p id="forgotPass">
-              <a href="#">Forgot your password?</a> 
-          </p>
+                    placeholder="Enter a Username" 
+                    aria-label="Username" 
+                    aria-describedby="basic-addon1"
+                    id="username">
+            </div>
+            <div id="usernameError" class="form-text text-danger"></div>
+    
+            <div class="mb-4">
+                <label for="password">Password<span class="text-danger"> *</span></label>
+                <input type="password" 
+                        class="form-control" 
+                        id="password"
+                        name="password"
+                        placeholder="Enter your password">
+            </div>
+            <div id="passwordError" class="form-text text-danger"></div>
 
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="autoSizingCheck2">
-            <label class="form-check-label" for="autoSizingCheck2">
-              Remember me
-            </label> </div>
-  
-          <button type="submit" 
-                  value="login"
-                  name="login" 
-                  class="btn btn-login my-2 mb-3">Sign in</button>
-          
-          <p>
-              <div style="display: flex; align-items: center; text-align: center;">
-                  <hr >
-                  <span>Or</span>
-                  <hr>
-              </div>
-              <span class="mx-1">Don't have an account?</span><a href="signUp.html">sign up now</a> 
-          </p>
-      
-      </form>
-  </div>
-</div>
+            <p id="forgotPass">
+                <a href="#">Forgot your password?</a> 
+            </p>
 
-<footer id="about-us-section" class="about-us-section">
-  <div class="px-4 py-2">
-      <div class="row justify-content-around g-4">
-          <!-- Column 1: Contact Info -->
-          <div class="col-lg-5 col-md-6">
-              <div class="contact-info">
-                  <p><i class="fas fa-map-marker-alt highlight"></i> Location: ITI, Egypt</p>
-                  <p><i class="fas fa-envelope highlight"></i> Email: info@homes.com</p>
-                  <p><i class="fas fa-phone-alt highlight"></i> Phone: +20 100 200 3000</p>
-              </div>
-          </div>
-
-          <!-- Column 2: Explore -->
-          <div class="col-lg-2 col-md-6">
-              <ul class="explore-list">
-                  <li class="explore-item"><i class="fas fa-home highlight"></i> Buy</li>
-                  <li class="explore-item"><i class="fas fa-key highlight"></i> Rent</li>
-                  <li class="explore-item"><i class="fas fa-calendar highlight"></i> Short Term</li>
-                  <li class="explore-item"><i class="fas fa-building highlight"></i> New Projects</li>
-              </ul>
-          </div>
-
-          <!-- Column 3: Services -->
-          <div class="col-lg-2 col-md-6">
-              <ul class="services-list">
-                  <li class="service-item"><i class="fas fa-search highlight"></i> Advanced Property Search</li>
-                  <li class="service-item"><i class="fas fa-file-alt highlight"></i> Detailed Property Descriptions</li>
-                  <li class="service-item"><i class="fas fa-headset highlight"></i> Expert Assistance</li>
-                  <li class="service-item"><i class="fas fa-handshake highlight"></i> Hassle-Free Transactions</li>
-              </ul>
-          </div>
-
-          <!-- Column 4: Quick Links -->
-          <div class="col-lg-2 col-md-6">
-              <ul class="quick-links-list">
-                  <li class="quick-link-item">
-                      <i class="fas fa-home highlight"></i> 
-                      <a href="#home-section" class="quick-link" aria-label="Go to Home Section">Home</a>
-                  </li>
-                  <li class="quick-link-item">
-                      <i class="fas fa-building highlight"></i> 
-                      <a href="#properties-section" class="quick-link" aria-label="Go to Properties Section">Properties</a>
-                  </li>
-                  <li class="quick-link-item">
-                      <i class="fas fa-info-circle highlight"></i> 
-                      <a href="#about-us-section" class="quick-link" aria-label="Go to About Us Section">About Us</a>
-                  </li>
-                  <li class="quick-link-item">
-                      <i class="fas fa-phone-alt highlight"></i> 
-                      <a href="#contact-us-section" class="quick-link" aria-label="Go to Contact Us Section">Contact Us</a>
-                  </li>
-              </ul>
-          </div>
-      </div>
-
-      <hr>
-      <p class="fa-bold text-center copy-right">
-          This project by <strong>Nizar Esmat</strong>, <strong>Tarek Mohamed</strong>, and <strong>Omar Elderwy</strong> for the ITI JS project. 
-          Copyright &copy; 2025 HOMES. All rights reserved.
-      </p>
-  </div>
-</footer>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="autoSizingCheck2">
+                <label class="form-check-label" for="autoSizingCheck2">
+                    Remember me
+                </label> </div>
+    
+            <button type="submit" 
+                    value="login"
+                    name="login" 
+                    class="btn btn-login my-2 mb-3">Sign in</button>
+            
+            <p>
+                <div style="display: flex; align-items: center; text-align: center;">
+                    <hr >
+                    <span>Or</span>
+                    <hr>
+                </div>
+                <span class="mx-1">Don't have an account?</span><a href="signUp.html">sign up now</a> 
+            </p>
+        
+        </form>
+    </div>
+    </div>
+    <footer id="about-us-section" class="about-us-section">
+        <div class="px-4 py-2">
+            <div class="row justify-content-around g-4">
+                <!-- Column 1: Contact Info -->
+                <div class="col-lg-5 col-md-6">
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt highlight"></i> Location: ITI, Egypt</p>
+                        <p><i class="fas fa-envelope highlight"></i> Email: info@homes.com</p>
+                        <p><i class="fas fa-phone-alt highlight"></i> Phone: +20 100 200 3000</p>
+                    </div>
+                </div>
+                <!-- Column 2: Explore -->
+                <div class="col-lg-2 col-md-6">
+                    <ul class="explore-list">
+                        <li class="explore-item"><i class="fas fa-home highlight"></i> Buy</li>
+                        <li class="explore-item"><i class="fas fa-key highlight"></i> Rent</li>
+                        <li class="explore-item"><i class="fas fa-calendar highlight"></i> Short Term</li>
+                        <li class="explore-item"><i class="fas fa-building highlight"></i> New Projects</li>
+                    </ul>
+                </div>
+                <!-- Column 3: Services -->
+                <div class="col-lg-2 col-md-6">
+                    <ul class="services-list">
+                        <li class="service-item"><i class="fas fa-search highlight"></i> Advanced Property Search</li>
+                        <li class="service-item"><i class="fas fa-file-alt highlight"></i> Detailed Property Descriptions</li>
+                        <li class="service-item"><i class="fas fa-headset highlight"></i> Expert Assistance</li>
+                        <li class="service-item"><i class="fas fa-handshake highlight"></i> Hassle-Free Transactions</li>
+                    </ul>
+                </div>
+                <!-- Column 4: Quick Links -->
+                <div class="col-lg-2 col-md-6">
+                    <ul class="quick-links-list">
+                        <li class="quick-link-item">
+                            <i class="fas fa-home highlight"></i> 
+                            <a href="#home-section" class="quick-link" aria-label="Go to Home Section">Home</a>
+                        </li>
+                        <li class="quick-link-item">
+                            <i class="fas fa-building highlight"></i> 
+                            <a href="#properties-section" class="quick-link" aria-label="Go to Properties Section">Properties</a>
+                        </li>
+                        <li class="quick-link-item">
+                            <i class="fas fa-info-circle highlight"></i> 
+                            <a href="#about-us-section" class="quick-link" aria-label="Go to About Us Section">About Us</a>
+                        </li>
+                        <li class="quick-link-item">
+                            <i class="fas fa-phone-alt highlight"></i> 
+                            <a href="#contact-us-section" class="quick-link" aria-label="Go to Contact Us Section">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="fa-bold text-center copy-right">
+                This project by <strong>Nizar Esmat</strong>, <strong>Tarek Mohamed</strong>, and <strong>Omar Elderwy</strong> for the ITI JS project. 
+                Copyright &copy; 2025 HOMES. All rights reserved.
+            </p>
+        </div>
+    </footer>
 <script src="../modules/main.js"></script>
 <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> 
+
 </body>
 </html>
