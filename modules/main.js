@@ -1,4 +1,7 @@
+
 /* ------------------------------------------------- NAV BAR -------------------------------------------------------- */
+
+
 // dropdown menu 
 const toggleBtn = document.querySelector('.toggle-btn');
 const toggleBtnIcon = document.querySelector(".toggle-btn i");
@@ -22,3 +25,9 @@ toggleBtn.onclick = function () {
 }
 
 /* ------------------------------------------------- HERO SECTION ---------------------------------------------------- */
+
+
+
+
+
+/*-------------------------------------------------- sign up validation ----------------------------------------*/ 

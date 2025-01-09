@@ -88,10 +88,9 @@ html {
 
 body {
   background-color: var(--primary-3);
-  /* height: 5000px; */
-  /* position: relative; */
   display: flex;
   flex-direction: column;
+  align-content:space-between ;
   min-height: 100vh;
 }
 
