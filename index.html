@@ -62,15 +62,20 @@
   <main>
     <!-- hero section -->
     <div class="container col-xxl-8 px-4 py-5">
-      <div class="row flex-lg-row-reverse g-5 py-5">
-        <div class="col-10 col-sm-8 col-lg-6">
-          <img src="assets/example.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+      <div class="row flex-lg-row-reverse g-5 py-5" id="hero-image" style="
+        background-image: url(assets/example.png);
+        background-size: cover;
+        background-position: 151px -258px;
+        background-repeat: no-repeat;
+        ">
+        <div class="col-10 col-sm-8 col-lg-6" >
+          <!-- <img src="assets/example.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy"> -->
         </div>
         <div class="col-lg-6 d-flex flex-column justify-content-end">
-          <h1 class="display-5 fw-bold lh-1 mb-3">Find the home you deserve</h1>
           <div class="d-grid gap-2 d-md-flex justify-content-md-start mt-5">
             <form action="" class="search-form">
               <div style="padding: 10px; background-color: hsl(9, 100%, 70%); border-radius: 20px; box-shadow: 10px 10px 50px 0px rgba(0,0,0,0.75);">
+                <h1 class="display-5 fw-bold lh-1 mb-3">Find the home you deserve</h1>
                 <p class="lead">Search through our collection</p>
                 <div class="input-group" style="height: 50px;">
                   <input type="text" class="form-control" list="locations" placeholder="location">
