@@ -341,6 +341,48 @@ header {
   overflow: hidden;
 }
 
+#hero-section .input-group>label{
+  display: none;
+}
+#hero-section .input-group{
+  height: 50px;
+}
+@media screen and (max-width: 992px) {
+  #hero-section .input-group>label{
+    display: block;
+  }
+  #hero-section .input-group{
+    flex-direction: column;
+    height: unset;
+  }
+  #hero-section .input-group input{
+    margin-bottom: 1rem;
+    width: auto;
+    border-radius: 10px;
+  }
+  #hero-section .input-group button{
+    width: auto;
+    border-radius: 10px;
+  }
+  #hero-section .input-group select{
+    width: auto;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+  }
+  #hero-section h1{
+    display: none;
+  }
+  #hero-section img{
+    display: none;
+  }
+  #hero-section{
+    background-image: url(assets/example.png);
+    background-size: cover;
+    background-position: -193px -208px;
+    background-repeat: no-repeat;
+  }
+}
+
 .hero-section-1 {
   width: 500px;
   height: 500px;
