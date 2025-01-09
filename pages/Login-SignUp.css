@@ -1,4 +1,5 @@
 /* ------------------------------------------------------- Login page -----------------------------------------------------*/
+
 .login-container {
     margin: 2rem auto;
     text-align: center;
@@ -67,6 +68,10 @@
     text-align: left;
 }
 
+
+#verifyCodeBox{
+    display: none;
+}
 @media (max-width: 668px) {
     .login-container {
         padding: 1rem;
