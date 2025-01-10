@@ -16,6 +16,7 @@ const termsError = document.getElementById("termsError");
 const phoneError = document.getElementById("matchingPhoneError");
 
 
+
 // Function to display error message in the error field
 const setError = (input, errorMessage, errorElement) => {
     if (errorMessage) {
@@ -150,19 +151,6 @@ document.getElementById("phoneNumber").addEventListener("input", validatePhone);
 document.getElementById("register").addEventListener("click", function (e) {
     e.preventDefault();
 
-    let container = [];
-    
-    if(localStorage.getItem("users") == null){
-        localStorage.setItem("users", JSON.stringify(container));
-    }else{
-        container=JSON.parse(localStorage.getItem("users")) || [];
-    }
-
-    console.log(usernameInput.value && emailInput.value && passwordInput.value && confirmPaswwordInput.value && phoneInput.value);
-    
-
- 
-
     const userEmail = document.getElementById("email").value;
     const verificationCode = Math.floor(100000 + Math.random() * 900000);
 
@@ -191,14 +179,23 @@ document.getElementById("register").addEventListener("click", function (e) {
                 const storedVerificationCode = localStorage.getItem("verificationCode");
                 if (userVerificationCode === storedVerificationCode) {
                     alert("Verification successful!");
+
+                    let container = [];
+    
+                    if(localStorage.getItem("users") == null){
+                        localStorage.setItem("users", JSON.stringify(container));
+                    }else{
+                        container=JSON.parse(localStorage.getItem("users")) || [];
+                    }
+                
                     if (usernameInput.value && emailInput.value && passwordInput.value && confirmPaswwordInput.value && phoneInput.value) {
                         const user = {
+                            id:Date.now(),
                             name: usernameInput.value,
                             email: emailInput.value,
                             password: passwordInput.value,
                             phone: phoneInput.value,
                         };
-                        console.log(user);
                         container.push(user);
                         localStorage.setItem("users", JSON.stringify(container));
                         alert("Account created successfully");
