@@ -42,130 +42,122 @@
             
             <div class="innerPostProperty-container">
                 <!-- property price -->
-                <div class="col-md-3">
-                    <label for="propertyPrice" class="form-label">Property Price<span class="text-danger"> *</span></label>
-                    <input  type="number" 
-                            class="form-control" 
-                            id="propertyPrice"
-                            min="0">
-                </div>
-                
-                <!-- Deposite Price -->
-                <div class="col-md-3">
-                    <label for="depositePrice" class="form-label">Deposite Price<span class="text-danger"> *</span></label>
-                    <input  type="number" 
-                            class="form-control" 
-                            id="depositePrice"
-                            min="0">
-                </div>
-
-                <!-- Location -->
-
-
-                <!-- city -->
-                <div class="col-md-3">
-                    <label for="city" class="form-label">City<span class="text-danger"> *</span></label>
-                    <select class="form-select" id="city" required>
-                        <option selected disabled value="">Select a city</option>
-                        <option>New york</option>
-                        <option>Boston</option>
-                        <option>x</option>
-                        <option>y</option>
-                        <option>z</option>
-                    </select>
+                <div class="row row-cols-2 gy-3 gx-5">
+                    <div class="col">
+                        <label for="propertyPrice" class="form-label">Property Price<span class="text-danger"> *</span></label>
+                        <input  type="number"
+                                class="form-control"
+                                id="propertyPrice"
+                                min="0">
                     </div>
-
-                <!-- State -->
-                <div class="col-md-3">
-                    <label for="state" class="form-label">State<span class="text-danger"> *</span></label>
-                    <select class="form-select" id="state" required>
-                        <option selected disabled value="">Select a state.</option>
-                        <option>New York</option>
-                        <option>Chicago</option>
-                        <option>a</option>
-                        <option>b</option>
-                        <option>c</option>
-                    </select>
-                </div>
-                
-                <!-- Type -->
-                <div class="col-md-3">
-                    <label for="propertyType" class="form-label">Enter property type<span class="text-danger"> *</span></label>
-                    <select class="form-select" id="propertyType" required>
-                        <option selected disabled value="">Property Type</option>
-                        <option value="flat">Flat</option>
-                        <option value="villa">Villa</option>
-                    </select>
-                </div>
-
-                <!-- floor number ==> only if the property type is flat -->
-                <div class="col-md-3">
-                    <label for="floor" class="form-label">Floor<span class="text-danger"> *</span></label>
-                    <input  type="number" 
-                            class="form-control" 
-                            id="floor"
-                            placeholder="Enter floor"
-                            min="0"
-                            max="200">
-                </div>
-
-                <!-- bathrooms -->
-                <div class="col-md-3">
-                    <label for="bathrooms" class="form-label">Enter number of bathrooms<span class="text-danger"> *</span></label>
-                    <select class="form-select" id="bathrooms" required>
-                        <option selected disabled value="">Bathrooms</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7+">7+</option>
-                    </select>
-                </div>
-
-                <!-- bedroom -->
-                <div class="col-md-3">
-                    <label for="bedrooms" class="form-label">Enter number of bedrooms<span class="text-danger"> *</span></label>
-                    <select class="form-select" id="bedrooms" required>
-                        <option selected disabled value="">Bedrooms</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7+">7+</option>
-                    </select>
-                </div>
-
-                <!-- Property status (ready to move) -->
-                <div class="col-md-3">
-                    <label for="propertyStatus" class="form-label">Property Status<span class="text-danger"> *</span></label>
-                    <select class="form-select" id="propertyStatus" required>
-                        <option selected disabled value="">Property Status</option>
-                        <option value="readyToMove">Ready to move</option>
-                        <option value="underConstruction">Under Construction</option>
-                    </select>
-                </div>
-
-                <!-- property area(m2) -->
-                <div class="col-md-3">
-                    <label for="propertyArea" class="form-label">Property Area<span class="text-danger"> *</span></label>
-                    <input  type="number" 
-                            class="form-control" 
-                            id="propertyArea">
-                </div>
-
-                <!-- Furnishing Status -->
-                <div class="col-md-3">
-                    <label for="propertyStatus" class="form-label">Furnishing Status<span class="text-danger"> *</span></label>
-                    <select class="form-select" id="propertyStatus" required>
-                        <option selected disabled value="">Furnishing Status</option>
-                        <option value="readyToMove">Furnished</option>
-                        <option value="underConstruction">Semi-Furnished</option>
-                        <option value="underConstruction">Un-furnished</option>
-                    </select>
+                    
+                    <!-- Deposite Price -->
+                    <div class="col">
+                        <label for="depositePrice" class="form-label">Deposite Price<span class="text-danger"> *</span></label>
+                        <input  type="number"
+                                class="form-control"
+                                id="depositePrice"
+                                min="0">
+                    </div>
+                    <!-- Location -->
+                    <!-- city -->
+                    <div class="col">
+                        <label for="city" class="form-label">City<span class="text-danger"> *</span></label>
+                        <select class="form-select" id="city" required>
+                            <option selected disabled value="">Select a city</option>
+                            <option>New york</option>
+                            <option>Boston</option>
+                            <option>x</option>
+                            <option>y</option>
+                            <option>z</option>
+                        </select>
+                        </div>
+                    <!-- State -->
+                    <div class="col">
+                        <label for="state" class="form-label">State<span class="text-danger"> *</span></label>
+                        <select class="form-select" id="state" required>
+                            <option selected disabled value="">Select a state.</option>
+                            <option>New York</option>
+                            <option>Chicago</option>
+                            <option>a</option>
+                            <option>b</option>
+                            <option>c</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Type -->
+                    <div class="col">
+                        <label for="propertyType" class="form-label">Enter property type<span class="text-danger"> *</span></label>
+                        <select class="form-select" id="propertyType" required>
+                            <option selected disabled value="">Property Type</option>
+                            <option value="flat">Flat</option>
+                            <option value="villa">Villa</option>
+                        </select>
+                    </div>
+                    <!-- floor number ==> only if the property type is flat -->
+                    <div class="col">
+                        <label for="floor" class="form-label">Floor<span class="text-danger"> *</span></label>
+                        <input  type="number"
+                                class="form-control"
+                                id="floor"
+                                placeholder="Enter floor"
+                                min="0"
+                                max="200">
+                    </div>
+                    <!-- bathrooms -->
+                    <div class="col">
+                        <label for="bathrooms" class="form-label">Enter number of bathrooms<span class="text-danger"> *</span></label>
+                        <select class="form-select" id="bathrooms" required>
+                            <option selected disabled value="">Bathrooms</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7+">7+</option>
+                        </select>
+                    </div>
+                    <!-- bedroom -->
+                    <div class="col">
+                        <label for="bedrooms" class="form-label">Enter number of bedrooms<span class="text-danger"> *</span></label>
+                        <select class="form-select" id="bedrooms" required>
+                            <option selected disabled value="">Bedrooms</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7+">7+</option>
+                        </select>
+                    </div>
+                    <!-- Property status (ready to move) -->
+                    <div class="col">
+                        <label for="propertyStatus" class="form-label">Property Status<span class="text-danger"> *</span></label>
+                        <select class="form-select" id="propertyStatus" required>
+                            <option selected disabled value="">Property Status</option>
+                            <option value="readyToMove">Ready to move</option>
+                            <option value="underConstruction">Under Construction</option>
+                        </select>
+                    </div>
+                    <!-- property area(m2) -->
+                    <div class="col">
+                        <label for="propertyArea" class="form-label">Property Area<span class="text-danger"> *</span></label>
+                        <input  type="number"
+                                class="form-control"
+                                id="propertyArea">
+                    </div>
+                    <!-- Furnishing Status -->
+                    <div class="col">
+                        <label for="propertyStatus" class="form-label">Furnishing Status<span class="text-danger"> *</span></label>
+                        <select class="form-select" id="propertyStatus" required>
+                            <option selected disabled value="">Furnishing Status</option>
+                            <option value="readyToMove">Furnished</option>
+                            <option value="underConstruction">Semi-Furnished</option>
+                            <option value="underConstruction">Un-furnished</option>
+                        </select>
+                    </div>
                 </div>
 
             </div>
@@ -184,77 +176,75 @@
             <!-- checklist for specs -->
             <div class="container">
                 <h3>Property Specifications</h3>
-            
-                <!-- Lift -->
-                <div class="form-check mb-3">
-                    <label class="form-check-label" for="Lift">
-                        Is there a Lift?
-                    </label>
-                    <select class="form-select" id="Lift" required>
-                        <option selected disabled value="">Select</option>
-                        <option value="yes">Yes</option>
-                        <option value="no">No</option>
-                    </select>
-                </div>
-            
-                <!-- Garden -->
-                <div class="form-check mb-3">
-                    <label class="form-check-label" for="Garden">
-                        Is there a Garden?
-                    </label>
-                    <select class="form-select" id="Garden" required>
-                        <option selected disabled value="">Select</option>
-                        <option value="yes">Yes</option>
-                        <option value="no">No</option>
-                    </select>
-                </div>
-            
-                <!-- Security -->
-                <div class="form-check mb-3">
-                    <label class="form-check-label" for="Security">
-                        Is there Security?
-                    </label>
-                    <select class="form-select" id="Security" required>
-                        <option selected disabled value="">Select</option>
-                        <option value="yes">Yes</option>
-                        <option value="no">No</option>
-                    </select>
-                </div>
-            
-                <!-- Gym -->
-                <div class="form-check mb-3">
-                    <label class="form-check-label" for="Gym">
-                        Is there a Gym?
-                    </label>
-                    <select class="form-select" id="Gym" required>
-                        <option selected disabled value="">Select</option>
-                        <option value="yes">Yes</option>
-                        <option value="no">No</option>
-                    </select>
-                </div>
-            
-                <!-- Parking -->
-                <div class="form-check mb-3">
-                    <label class="form-check-label" for="Parking">
-                        Is there Parking?
-                    </label>
-                    <select class="form-select" id="Parking" required>
-                        <option selected disabled value="">Select</option>
-                        <option value="yes">Yes</option>
-                        <option value="no">No</option>
-                    </select>
-                </div>
-            
-                <!-- Market Area -->
-                <div class="form-check mb-3">
-                    <label class="form-check-label" for="MarketArea">
-                        Is there a Market Area?
-                    </label>
-                    <select class="form-select" id="MarketArea" required>
-                        <option selected disabled value="">Select</option>
-                        <option value="yes">Yes</option>
-                        <option value="no">No</option>
-                    </select>
+                <hr>
+                <br>
+                <div class="row row-cols-3">
+                    <!-- Lift -->
+                    <div class="form-check mb-3">
+                        <label class="form-check-label" for="Lift">
+                            Is there a Lift?
+                        </label>
+                        <select class="form-select" id="Lift" required>
+                            <option selected disabled value="">Select</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                    <!-- Garden -->
+                    <div class="form-check mb-3">
+                        <label class="form-check-label" for="Garden">
+                            Is there a Garden?
+                        </label>
+                        <select class="form-select" id="Garden" required>
+                            <option selected disabled value="">Select</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                    <!-- Security -->
+                    <div class="form-check mb-3">
+                        <label class="form-check-label" for="Security">
+                            Is there Security?
+                        </label>
+                        <select class="form-select" id="Security" required>
+                            <option selected disabled value="">Select</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                    <!-- Gym -->
+                    <div class="form-check mb-3">
+                        <label class="form-check-label" for="Gym">
+                            Is there a Gym?
+                        </label>
+                        <select class="form-select" id="Gym" required>
+                            <option selected disabled value="">Select</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                    <!-- Parking -->
+                    <div class="form-check mb-3">
+                        <label class="form-check-label" for="Parking">
+                            Is there Parking?
+                        </label>
+                        <select class="form-select" id="Parking" required>
+                            <option selected disabled value="">Select</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                    <!-- Market Area -->
+                    <div class="form-check mb-3">
+                        <label class="form-check-label" for="MarketArea">
+                            Is there a Market Area?
+                        </label>
+                        <select class="form-select" id="MarketArea" required>
+                            <option selected disabled value="">Select</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
                 </div>
             </div>
             <div>
