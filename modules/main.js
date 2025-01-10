@@ -35,8 +35,8 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
     let user = login();
     if(user){
         window.open("../index.html", "_self");
+        sessionStorage.setItem("user", user);
     }else{
         alert("Wrong username or password")
     }
 })
-

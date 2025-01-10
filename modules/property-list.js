@@ -1,4 +1,3 @@
-import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
 import fd from "./search.js"
 
 const propertyContainer = document.querySelector(".property-container");

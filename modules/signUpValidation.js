@@ -15,7 +15,17 @@ const matchingPasswordError = document.getElementById("matchingPasswordError");
 const termsError = document.getElementById("termsError");
 const phoneError = document.getElementById("matchingPhoneError");
 
-let clearForm= () => {
+
+//flags
+let usernameFlag = false;
+let emailFlag = false;
+let passwordFlag = false;
+let matchingPasswordFlag = false;
+let termsFlag = false;
+let phoneFlag = false;
+
+
+let clearForm = () => {
     usernameInput.value = "";
     emailInput.value = "";
     passwordInput.value = "";
@@ -53,6 +63,7 @@ const validateUsername = () => {
     else if (username.length > 25)
         errorMessage = "Username cannot exceed 25 characters";
 
+    usernameFlag = !usernameFlag;
     setError(usernameInput, errorMessage, usernameError);
 
 }
@@ -68,9 +79,10 @@ const validateEmail = () => {
     if (email === "")
         errorMessage = "Email is required";
 
-    else if (!emailRegex.test(email))
+     else if (!emailRegex.test(email))
         errorMessage = "Inavalid Email";
 
+     emailFlag = !errorMessage;
     setError(emailInput, errorMessage, emailError);
 }
 emailInput.addEventListener("input", validateEmail);
@@ -103,6 +115,7 @@ const validatePassword = () => {
     else if (password.length > 60)
         errorMessage = "Passsword cannot exceed 60 characters";
 
+    passwordFlag = !errorMessage;
     setError(passwordInput, errorMessage, passwordError);
 }
 
@@ -118,6 +131,7 @@ const confirmPassword = () => {
     if (password !== confirmPassword)
         errorMessage = "Passwords doesn't match";
 
+    matchingPasswordFlag = !errorMessage;
     setError(confirmPaswwordInput, errorMessage, matchingPasswordError);
 }
 
@@ -132,9 +146,11 @@ const validateTerms = () => {
     if (!termsInput.checked)
         errorMessage = "You must agree to the terms and conditions";
 
+    termsFlag = !errorMessage;
     setError(termsInput, errorMessage, termsError);
 }
 
+termsInput.addEventListener("input", validateTerms);
 
 
 //phone validation
@@ -148,6 +164,7 @@ const validatePhone = () => {
     else if (phone.length !== 11)
         errorMessage = "Phone number must be 11 digits";
 
+    phoneFlag = !errorMessage;
     setError(phoneInput, errorMessage, phoneError);
 }
 
@@ -155,79 +172,89 @@ document.getElementById("phoneNumber").addEventListener("input", validatePhone);
 /*-------------------------------------------------------*/
 
 
-document.getElementById("register").addEventListener("click", function (e) {
-    e.preventDefault();
+    document.getElementById("register").addEventListener("click", function (e) {
 
-    const userEmail = document.getElementById("email").value;
-    const verificationCode = Math.floor(100000 + Math.random() * 900000);
-
-    localStorage.setItem("verificationCode", verificationCode);
-
-    const templateParams = {
-        email: userEmail,
-        code: verificationCode,
-    };
-
-
+        if(usernameFlag && emailFlag && passwordFlag && matchingPasswordFlag && termsFlag && phoneFlag){
+            e.preventDefault();
+            const userEmail = document.getElementById("email").value;
+            const verificationCode = Math.floor(100000 + Math.random() * 900000);
     
-
-            
-    emailjs
-        .send("service_22pqp7r", "template_wb6yeia", templateParams)
-        .then(() => {
-            let container = [];
+            localStorage.setItem("verificationCode", verificationCode);
     
-            if(localStorage.getItem("users") == null){
-                localStorage.setItem("users", JSON.stringify(container));
-            }else{
-                container=JSON.parse(localStorage.getItem("users")) || [];
-            }
-            let isDuplicate = false;
-            container.forEach((value) => {
-                if (value.email === emailInput.value) {
-                    isDuplicate = true;
-                }
-            })
-
-            if (isDuplicate) {
-                alert("Email already exists");
-                clearForm();
-                return;
-            }
-            console.log("Email sent successfully");
-            document.getElementById("verifyCodeBox").style.display = "block";
-            document.getElementById("signUpBox").style.display = "none";
-
-
-            document.getElementById("verifyCode").addEventListener("click", function (e) {
-                e.preventDefault();
-                const userVerificationCode = document.getElementById("verificationCode").value;
-                const storedVerificationCode = localStorage.getItem("verificationCode");
-             
-                if (userVerificationCode === storedVerificationCode) {
-                    alert("Verification successful!");
-
-                  
-             
-                    if (usernameInput.value && emailInput.value && passwordInput.value && confirmPaswwordInput.value && phoneInput.value) {
-                        const user = {
-                            id:Date.now(),
-                            name: usernameInput.value,
-                            email: emailInput.value,
-                            password: passwordInput.value,
-                            phone: phoneInput.value,
-                        };
-                        container.push(user);
+            const templateParams = {
+                email: userEmail,
+                code: verificationCode,
+            };
+    
+    
+    
+    
+    
+            emailjs
+                .send("service_22pqp7r", "template_wb6yeia", templateParams)
+                .then(() => {
+                    let container = [];
+    
+                    if (localStorage.getItem("users") == null) {
                         localStorage.setItem("users", JSON.stringify(container));
-                        alert("Account created successfully");
-                    }   
-                       } else {
-                    alert("Invalid verification code. Please try again.");
-                }
-            })
+                    } else {
+                        container = JSON.parse(localStorage.getItem("users")) || [];
+                    }
+                    let isDuplicate = false;
+                    container.forEach((value) => {
+                        if (value.email === emailInput.value) {
+                            isDuplicate = true;
+                        }
+                    })
+    
+                    if (isDuplicate) {
+                        alert("Email already exists");
+                        clearForm();
+                        return;
+                    }
+                    console.log("Email sent successfully");
+                    document.getElementById("verifyCodeBox").style.display = "block";
+                    document.getElementById("signUpBox").style.display = "none";
+    
+    
+                    document.getElementById("verifyCode").addEventListener("click", function (e) {
+                        e.preventDefault();
+                        const userVerificationCode = document.getElementById("verificationCode").value;
+                        const storedVerificationCode = localStorage.getItem("verificationCode");
+    
+                        if (userVerificationCode === storedVerificationCode) {
+                            alert("Verification successful!");
+    
+    
+    
+                            if (usernameInput.value && emailInput.value && passwordInput.value && confirmPaswwordInput.value && phoneInput.value) {
+                                const user = {
+                                    id: Date.now(),
+                                    name: usernameInput.value,
+                                    email: emailInput.value,
+                                    password: passwordInput.value,
+                                    phone: phoneInput.value,
+                                };
+                                container.push(user);
+                                localStorage.setItem("users", JSON.stringify(container));
+                                alert("Account created successfully");
+                            }
+                        } else {
+                            alert("Invalid verification code. Please try again.");
+                        }
+                    })
+    
+                })
+                .catch((error) => {
+                    console.error("Failed to send email:", error);
+                });
+      
+        }else{
+            alert("Please fill the form correctly");
+            return;
+        }
+     
+    });
 
-        })
-        .catch((error) => {
-            console.error("Failed to send email:", error);
-        });
-});
+
+
