@@ -20,8 +20,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- link to css -->
-    <link href="../style.css" rel="stylesheet">
-    <link href="Login-SignUp.css" rel="stylesheet">
+    <link href="../styles/style.css" rel="stylesheet">
+    <link href="./../styles/Login-SignUp.css" rel="stylesheet">
 
 </head>
 
@@ -37,7 +37,7 @@
             </div>
 
             <ul class="links" style="margin-bottom:0px;">
-                <li><a href="#hero-section">HOME</a></li>
+                <li><a href="../index.html">HOME</a></li>
                 <li><a href="#properties-section">PROPERTIES</a></li>
                 <li><a href="#about-us-section">ABOUT US</a></li>
                 <li><a href="#services-section">OUR SERVIECES</a></li>
@@ -63,7 +63,7 @@
     <!-- Sign Up Box -->
     <main>
         <div class="login-container" id="signUpBox">
-            <form>
+            <form id="registrationForm">
                 <div class="mb-5">
                     <h3>Sign up for a new account</h3>
                 </div>
@@ -75,6 +75,13 @@
                         aria-describedby="basic-addon1" id="username">
                 </div>
                 <div id="usernameError" class="form-text text-danger"></div>
+
+                <div class="mb-4">
+                    <label for="phoneNumber">phoneNumber<span class="text-danger"> *</span></label>
+                    <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber"
+                        placeholder="enter you number">
+                </div>
+                <div id="matchingPhoneError" class="form-text text-danger"></div>
 
                 <div class="mb-4">
                     <label for="email">Email Address<span class="text-danger"> *</span></label>
@@ -98,7 +105,7 @@
                 <div id="matchingPasswordError" class="form-text text-danger"></div>
 
                 <div class="form-check">
-                    <input onchange=validateTerms() class="form-check-input" type="checkbox" id="terms">
+                    <input  class="form-check-input" type="checkbox" id="terms">
                     <label class="form-check-label" for="terms">
                         I have read <span><a href="#">terms & conditions</a></span>
                     </label>
@@ -205,8 +212,8 @@
             </p>
         </div>
     </footer>
-    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../modules/signUpValidation.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="../modules/signUpValidation.js"></script>
 
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">

@@ -6,13 +6,14 @@ const emailInput = document.getElementById("email");
 const passwordInput = document.getElementById("password");
 const confirmPaswwordInput = document.getElementById("confirmPassword");
 const termsInput = document.getElementById("terms")
-
+const phoneInput = document.getElementById("phoneNumber");
 // Get error elements ---> to set error messages if there is validation issue 
 const usernameError = document.getElementById("usernameError");
 const emailError = document.getElementById("emailError");
 const passwordError = document.getElementById("passwordError");
 const matchingPasswordError = document.getElementById("matchingPasswordError");
 const termsError = document.getElementById("termsError");
+const phoneError = document.getElementById("matchingPhoneError");
 
 
 // Function to display error message in the error field
@@ -125,12 +126,42 @@ const validateTerms = () => {
 
     setError(termsInput, errorMessage, termsError);
 }
+
+
+
+//phone validation
+const validatePhone = () => {
+    const phone = phoneInput.value;
+    let errorMessage = "";
+
+    if (phone === "")
+        errorMessage = "Phone number is required";
+
+    else if (phone.length !== 11)
+        errorMessage = "Phone number must be 11 digits";
+
+    setError(phoneInput, errorMessage, phoneError);
+}
+
+document.getElementById("phoneNumber").addEventListener("input", validatePhone);
 /*-------------------------------------------------------*/
+
 
 document.getElementById("register").addEventListener("click", function (e) {
     e.preventDefault();
-    console.log("clicked");
 
+    let container = [];
+    
+    if(localStorage.getItem("users") == null){
+        localStorage.setItem("users", JSON.stringify(container));
+    }else{
+        container=JSON.parse(localStorage.getItem("users")) || [];
+    }
+
+    console.log(usernameInput.value && emailInput.value && passwordInput.value && confirmPaswwordInput.value && phoneInput.value);
+    
+
+ 
 
     const userEmail = document.getElementById("email").value;
     const verificationCode = Math.floor(100000 + Math.random() * 900000);
@@ -143,6 +174,9 @@ document.getElementById("register").addEventListener("click", function (e) {
     };
 
 
+    
+
+            
     emailjs
         .send("service_22pqp7r", "template_wb6yeia", templateParams)
         .then(() => {
@@ -157,9 +191,19 @@ document.getElementById("register").addEventListener("click", function (e) {
                 const storedVerificationCode = localStorage.getItem("verificationCode");
                 if (userVerificationCode === storedVerificationCode) {
                     alert("Verification successful!");
-                    window.open("pages/login.html", "_self");
-                    // todo-> add account creation to json file
-                } else {
+                    if (usernameInput.value && emailInput.value && passwordInput.value && confirmPaswwordInput.value && phoneInput.value) {
+                        const user = {
+                            name: usernameInput.value,
+                            email: emailInput.value,
+                            password: passwordInput.value,
+                            phone: phoneInput.value,
+                        };
+                        console.log(user);
+                        container.push(user);
+                        localStorage.setItem("users", JSON.stringify(container));
+                        alert("Account created successfully");
+                    }   
+                       } else {
                     alert("Invalid verification code. Please try again.");
                 }
             })
