@@ -15,7 +15,14 @@ const matchingPasswordError = document.getElementById("matchingPasswordError");
 const termsError = document.getElementById("termsError");
 const phoneError = document.getElementById("matchingPhoneError");
 
-
+let clearForm= () => {
+    usernameInput.value = "";
+    emailInput.value = "";
+    passwordInput.value = "";
+    confirmPaswwordInput.value = "";
+    termsInput.checked = false;
+    phoneInput.value = "";
+}
 
 // Function to display error message in the error field
 const setError = (input, errorMessage, errorElement) => {
@@ -168,6 +175,25 @@ document.getElementById("register").addEventListener("click", function (e) {
     emailjs
         .send("service_22pqp7r", "template_wb6yeia", templateParams)
         .then(() => {
+            let container = [];
+    
+            if(localStorage.getItem("users") == null){
+                localStorage.setItem("users", JSON.stringify(container));
+            }else{
+                container=JSON.parse(localStorage.getItem("users")) || [];
+            }
+            let isDuplicate = false;
+            container.forEach((value) => {
+                if (value.email === emailInput.value) {
+                    isDuplicate = true;
+                }
+            })
+
+            if (isDuplicate) {
+                alert("Email already exists");
+                clearForm();
+                return;
+            }
             console.log("Email sent successfully");
             document.getElementById("verifyCodeBox").style.display = "block";
             document.getElementById("signUpBox").style.display = "none";
@@ -177,17 +203,12 @@ document.getElementById("register").addEventListener("click", function (e) {
                 e.preventDefault();
                 const userVerificationCode = document.getElementById("verificationCode").value;
                 const storedVerificationCode = localStorage.getItem("verificationCode");
+             
                 if (userVerificationCode === storedVerificationCode) {
                     alert("Verification successful!");
 
-                    let container = [];
-    
-                    if(localStorage.getItem("users") == null){
-                        localStorage.setItem("users", JSON.stringify(container));
-                    }else{
-                        container=JSON.parse(localStorage.getItem("users")) || [];
-                    }
-                
+                  
+             
                     if (usernameInput.value && emailInput.value && passwordInput.value && confirmPaswwordInput.value && phoneInput.value) {
                         const user = {
                             id:Date.now(),

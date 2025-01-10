@@ -1,7 +1,6 @@
 import { login } from "./Login.js";
 /* ------------------------------------------------- NAV BAR -------------------------------------------------------- */
 
-
 // dropdown menu 
 const toggleBtn = document.querySelector('.toggle-btn');
 const toggleBtnIcon = document.querySelector(".toggle-btn i");
@@ -28,12 +27,13 @@ toggleBtn.onclick = function () {
 
 
 /*-------------------------------------------------Log in----------------------------------------------------*/ 
-
-console.log(window.location.href)   ;
+let isSign=false
 if(window.location.href == "http://127.0.0.1:5500/pages/login.html")
 document.getElementById("loginForm").addEventListener("submit", function (e) {
     e.preventDefault();
-    if(login()){
+    //return the user name from the login function
+    let user = login();
+    if(user){
         window.open("../index.html", "_self");
     }else{
         alert("Wrong username or password")
