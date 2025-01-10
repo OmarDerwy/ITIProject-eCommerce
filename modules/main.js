@@ -1,4 +1,4 @@
-
+import { login } from "./Login.js";
 /* ------------------------------------------------- NAV BAR -------------------------------------------------------- */
 
 
@@ -27,7 +27,16 @@ toggleBtn.onclick = function () {
 /* ------------------------------------------------- HERO SECTION ---------------------------------------------------- */
 
 
+/*-------------------------------------------------Log in----------------------------------------------------*/ 
 
+console.log(window.location.href)   ;
+if(window.location.href == "http://127.0.0.1:5500/pages/login.html")
+document.getElementById("loginForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    if(login()){
+        window.open("../index.html", "_self");
+    }else{
+        alert("Wrong username or password")
+    }
+})
 
-
-/*-------------------------------------------------- sign up validation ----------------------------------------*/ 
