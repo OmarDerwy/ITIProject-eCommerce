@@ -105,13 +105,13 @@ const validatePassword = () => {
     else if (!passDigitRegex.test(password))
         errorMessage = "Passwod must contain at least one number";
     else if (passSpaceRegex.test(password))
-        errorMessage = "Password cannot contain spaces"
+        errorMessage = "Password cannot contain spaces";
     else if (!passUpperRegex.test(password))
         errorMessage = "Password must contain at least one Uppercase letter";
     else if (!passLowerRegex.test(password))
         errorMessage = "Password must contain at least one lowercase letter";
     else if (!passSpecialCharRegex.test(password))
-        errorMessage = 'Password must contain at least one special charcter !@#$%^&*(),.?":{}|<></> '
+        errorMessage = 'Password must contain at least one special charcter !@#$%^&*(),.?":{}|<></> ';
     else if (password.length > 60)
         errorMessage = "Passsword cannot exceed 60 characters";
 
