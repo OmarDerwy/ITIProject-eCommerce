@@ -1,6 +1,5 @@
-
+import { login } from "./Login.js";
 /* ------------------------------------------------- NAV BAR -------------------------------------------------------- */
-
 
 // dropdown menu 
 const toggleBtn = document.querySelector('.toggle-btn');
@@ -100,3 +99,17 @@ function handleCarousel () {
 
 
 /*-------------------------------------------------- sign up validation ----------------------------------------*/ 
+/*-------------------------------------------------Log in----------------------------------------------------*/ 
+let isSign=false
+if(window.location.href == "http://127.0.0.1:5500/pages/login.html")
+document.getElementById("loginForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    //return the user name from the login function
+    let user = login();
+    if(user){
+        window.open("../index.html", "_self");
+        sessionStorage.setItem("user", user);
+    }else{
+        alert("Wrong username or password")
+    }
+})

@@ -5,7 +5,7 @@ let type = document.getElementById("type");
 
 
 export default function filterData() {
-  return fetch("./assets/properties.json")
+  return fetch("../assets/properties.json")
     .then((res) => res.json())
     .then((data) => {
       console.log("🚀 ~ .then ~ data:", data);

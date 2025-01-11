@@ -2,7 +2,7 @@
   "name": "itiproject---ecommerce",
   "version": "1.0.0",
   "description": "eCommerce project for ITI Members: Omar, Tarek, Nizar",
-  "main": "modules\\main.js",
+  "main": "modules/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,5 +18,7 @@
   "homepage": "https://github.com/OmarDerwy/ITIProject-eCommerce#readme",
   "dependencies": {
     "bootstrap": "^5.3.3"
-  }
+  },
+  "type": "commonjs",
+  "keywords": []
 }
