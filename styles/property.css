@@ -22,3 +22,19 @@
     border-left: none;
     width: 200px;
 }
+#features *{
+    list-style: unset;
+    list-style-type: "\2605";
+}
+@media screen and (max-width: 992px) {
+    .property-container>div{
+        max-width: 520px;
+    }
+    
+}
+@media screen and (min-width: 992px) {
+    .property-container>div{
+        max-width: 800px;
+    }
+    
+}
