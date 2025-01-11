@@ -28,6 +28,7 @@ toggleBtn.onclick = function () {
 
 /* ------------------------------------------------- Featured property---------------------------------------------------- */
 // load carouel with JSON data
+if(window.location.href == "http://127.0.0.1:5500/index.html"){
 fetch('./assets/properties.json')
 .then(response => response.json())
 .then(data => {
@@ -93,7 +94,7 @@ function handleCarousel () {
         multipleCardCarousel.classList.add("slide");
     }
 }
-
+}
 
 
 
@@ -102,7 +103,7 @@ function handleCarousel () {
 /*-------------------------------------------------Log in----------------------------------------------------*/ 
 let isSign=false
 if(window.location.href == "http://127.0.0.1:5500/pages/login.html")
-document.getElementById("loginForm").addEventListener("submit", function (e) {
+    document.getElementById("loginForm").addEventListener("submit", function (e) {
     e.preventDefault();
     //return the user name from the login function
     let user = login();
