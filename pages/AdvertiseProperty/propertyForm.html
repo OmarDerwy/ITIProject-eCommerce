@@ -21,6 +21,40 @@
 
 </head>
 <body>
+    <header>
+        <!-- Nav bar -->
+        <nav class="nav-bar">
+            <div class="logo">
+                <a href="#">
+                    <!-- to be replaced with logo  -->
+                    HOMES
+                </a>
+            </div>
+            
+            <ul class="links" style="margin-bottom:0px;">
+                <li><a href="../index.html/#hero-section">HOME</a></li>
+                <li><a href="../index.html/#properties-section">PROPERTIES</a></li>
+                <li><a href="../index.html/#about-us-section">ABOUT US</a></li>
+                <li><a href="../index.html/#services-section">OUR SERVIECES</a></li>
+                <li><a href="../index.html/#contact-us-section">CONTACT US</a></li>
+            </ul>
+            <a href="signUp.html" class="get-started-btn">Sign Up</a>
+
+            <div class="toggle-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+
+            <div class="dropdown-menu">
+                <li><a href="#hero-section">HOME</a></li>
+                <li><a href="#properties-section">PROPERTIES</a></li>
+                <li><a href="#about-us-section">ABOUT US</a></li>
+                <li><a href="#services-section">OUR SERVIECES</a></li>
+                <li><a href="contact-us-section">CONTACT US</a></li>
+                <li><a href="login.html" class="get-started-btn">Login</a></li>
+            </div>
+    </header>
+    
     <div class="postProperty-container">
         <form action="">
             <div class="mb-5">
@@ -37,7 +71,9 @@
                         autofocus
                         id="adTitle">
             </div>
-
+            <div id="adTitleError" class="form-text text-danger"></div>
+            
+            <hr class="my-4"/>
             <!-- ............................................................................... -->
             
             <div class="innerPostProperty-container">
@@ -47,9 +83,10 @@
                         <label for="propertyPrice" class="form-label">Property Price<span class="text-danger"> *</span></label>
                         <input  type="number"
                                 class="form-control"
-                                id="propertyPrice"
-                                min="0">
+                                id="propertyPrice">
+                        <div id="propertyPriceError" class="form-text text-danger"></div>
                     </div>
+                    
                     
                     <!-- Deposite Price -->
                     <div class="col">
@@ -58,42 +95,54 @@
                                 class="form-control"
                                 id="depositePrice"
                                 min="0">
+                        <div id="depositePriceError" class="form-text text-danger"></div>
                     </div>
+                    
+
                     <!-- Location -->
+
                     <!-- city -->
                     <div class="col">
                         <label for="city" class="form-label">City<span class="text-danger"> *</span></label>
                         <select class="form-select" id="city" required>
-                            <option selected disabled value="">Select a city</option>
+                            <option selected value="">Select a city</option>
                             <option>New york</option>
                             <option>Boston</option>
                             <option>x</option>
                             <option>y</option>
                             <option>z</option>
+                            <option></option>
                         </select>
-                        </div>
+                        <div id="cityError" class="form-text text-danger"></div>    
+                    </div>
+                        
                     <!-- State -->
                     <div class="col">
                         <label for="state" class="form-label">State<span class="text-danger"> *</span></label>
                         <select class="form-select" id="state" required>
-                            <option selected disabled value="">Select a state.</option>
+                            <option selected value="">Select a state.</option>
                             <option>New York</option>
                             <option>Chicago</option>
                             <option>a</option>
                             <option>b</option>
                             <option>c</option>
                         </select>
+                        <div id="stateError" class="form-text text-danger"></div>
                     </div>
+                    
                     
                     <!-- Type -->
                     <div class="col">
                         <label for="propertyType" class="form-label">Enter property type<span class="text-danger"> *</span></label>
                         <select class="form-select" id="propertyType" required>
-                            <option selected disabled value="">Property Type</option>
+                            <option selected value="">Property Type</option>
                             <option value="flat">Flat</option>
                             <option value="villa">Villa</option>
                         </select>
+                        <div id="propertyTypeError" class="form-text text-danger"></div>
                     </div>
+                    
+
                     <!-- floor number ==> only if the property type is flat -->
                     <div class="col">
                         <label for="floor" class="form-label">Floor<span class="text-danger"> *</span></label>
@@ -103,12 +152,15 @@
                                 placeholder="Enter floor"
                                 min="0"
                                 max="200">
+                        <div id="floorError" class="form-text text-danger"></div>
                     </div>
+                    
+
                     <!-- bathrooms -->
                     <div class="col">
                         <label for="bathrooms" class="form-label">Enter number of bathrooms<span class="text-danger"> *</span></label>
                         <select class="form-select" id="bathrooms" required>
-                            <option selected disabled value="">Bathrooms</option>
+                            <option selected value="">Bathrooms</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -117,12 +169,14 @@
                             <option value="6">6</option>
                             <option value="7+">7+</option>
                         </select>
+                        <div id="bathroomsError" class="form-text text-danger"></div>
                     </div>
+
                     <!-- bedroom -->
                     <div class="col">
                         <label for="bedrooms" class="form-label">Enter number of bedrooms<span class="text-danger"> *</span></label>
                         <select class="form-select" id="bedrooms" required>
-                            <option selected disabled value="">Bedrooms</option>
+                            <option selected value="">Bedrooms</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -131,15 +185,17 @@
                             <option value="6">6</option>
                             <option value="7+">7+</option>
                         </select>
+                        <div id="bedroomsError" class="form-text text-danger"></div>
                     </div>
                     <!-- Property status (ready to move) -->
                     <div class="col">
                         <label for="propertyStatus" class="form-label">Property Status<span class="text-danger"> *</span></label>
                         <select class="form-select" id="propertyStatus" required>
-                            <option selected disabled value="">Property Status</option>
+                            <option selected value="">Property Status</option>
                             <option value="readyToMove">Ready to move</option>
                             <option value="underConstruction">Under Construction</option>
                         </select>
+                        <div id="propertyStatusError" class="form-text text-danger"></div>
                     </div>
                     <!-- property area(m2) -->
                     <div class="col">
@@ -147,111 +203,191 @@
                         <input  type="number"
                                 class="form-control"
                                 id="propertyArea">
+                        <div id="propertyAreaError" class="form-text text-danger"></div>
                     </div>
                     <!-- Furnishing Status -->
                     <div class="col">
-                        <label for="propertyStatus" class="form-label">Furnishing Status<span class="text-danger"> *</span></label>
-                        <select class="form-select" id="propertyStatus" required>
-                            <option selected disabled value="">Furnishing Status</option>
+                        <label for="furnishingStatus" class="form-label">Furnishing Status<span class="text-danger"> *</span></label>
+                        <select class="form-select" id="furnishingStatus" required>
+                            <option selected value="">Furnishing Status</option>
                             <option value="readyToMove">Furnished</option>
                             <option value="underConstruction">Semi-Furnished</option>
                             <option value="underConstruction">Un-furnished</option>
                         </select>
+                        <div id="furnishingStatusError" class="form-text text-danger"></div>
                     </div>
                 </div>
 
             </div>
 
-           
-
-
-            <!-- ............................................................... -->
-            
+            <hr class="my-4">            
+            <div class="input-group mb-3">
+                <label class="form-label mb-4" for="uploadImg">Upload Property Images<span class="text-danger"> *</span></label>
+                <input  type="file" 
+                        class="form-control" 
+                        id="uploadImg"
+                        placeholder="Choose an Image"
+                        accept="image/*" 
+                        multiple
+                        required>
+            </div>
+            <div id="uploadImgError" class="form-text text-danger"></div>
+            <hr class="my-4">
+            <!-- ........................................................................................... -->
             <!-- property description ===> text -->
             <div class="mb-3">
-                <label for="propertyDescription" class="form-label">Description</label>
-                <textarea class="form-control" id="propertyDescription" rows="3"></textarea>
+                <label for="propertyDescription" class="form-label">Description<span class="text-danger"> *</span></label>
+                <textarea   class="form-control" 
+                            id="propertyDescription" 
+                            rows="3"></textarea>
+                <div id="propertyDescriptionError" class="form-text text-danger"></div>
             </div>
 
+            <hr class="my-4">
+            <!-- ........................................................................................... -->
             <!-- checklist for specs -->
-            <div class="container">
-                <h3>Property Specifications</h3>
+            <div class="my-3">
+                <h3 class="my-3">Additional Property Features</h3>
                 <hr>
                 <br>
                 <div class="row row-cols-3">
                     <!-- Lift -->
                     <div class="form-check mb-3">
-                        <label class="form-check-label" for="Lift">
-                            Is there a Lift?
+                        <label class="form-check-label" for="lift">
+                            Is there a Lift?<span class="text-danger"> *</span>
                         </label>
-                        <select class="form-select" id="Lift" required>
-                            <option selected disabled value="">Select</option>
+                        <select class="form-select" id="lift" required>
+                            <option selected value="">Select</option>
                             <option value="yes">Yes</option>
                             <option value="no">No</option>
                         </select>
+                        <div id="liftError" class="form-text text-danger"></div>
                     </div>
                     <!-- Garden -->
                     <div class="form-check mb-3">
-                        <label class="form-check-label" for="Garden">
-                            Is there a Garden?
+                        <label class="form-check-label" for="garden">
+                            Is there a Garden?<span class="text-danger"> *</span>
                         </label>
-                        <select class="form-select" id="Garden" required>
-                            <option selected disabled value="">Select</option>
+                        <select class="form-select" id="garden" required>
+                            <option selected value="">Select</option>
                             <option value="yes">Yes</option>
                             <option value="no">No</option>
                         </select>
+                        <div id="gardenError" class="form-text text-danger"></div>
                     </div>
                     <!-- Security -->
                     <div class="form-check mb-3">
-                        <label class="form-check-label" for="Security">
-                            Is there Security?
+                        <label class="form-check-label" for="security">
+                            Is there Security?<span class="text-danger"> *</span>
                         </label>
-                        <select class="form-select" id="Security" required>
-                            <option selected disabled value="">Select</option>
+                        <select class="form-select" id="security" required>
+                            <option selected value="">Select</option>
                             <option value="yes">Yes</option>
                             <option value="no">No</option>
                         </select>
+                        <div id="securityError" class="form-text text-danger"></div>
                     </div>
                     <!-- Gym -->
                     <div class="form-check mb-3">
-                        <label class="form-check-label" for="Gym">
-                            Is there a Gym?
+                        <label class="form-check-label" for="gym">
+                            Is there a Gym?<span class="text-danger"> *</span>
                         </label>
-                        <select class="form-select" id="Gym" required>
-                            <option selected disabled value="">Select</option>
+                        <select class="form-select" id="gym" required>
+                            <option selected value="">Select</option>
                             <option value="yes">Yes</option>
                             <option value="no">No</option>
                         </select>
+                        <div id="gymError" class="form-text text-danger"></div>
                     </div>
                     <!-- Parking -->
                     <div class="form-check mb-3">
-                        <label class="form-check-label" for="Parking">
-                            Is there Parking?
+                        <label class="form-check-label" for="parking">
+                            Is there Parking?<span class="text-danger"> *</span>
                         </label>
-                        <select class="form-select" id="Parking" required>
-                            <option selected disabled value="">Select</option>
+                        <select class="form-select" id="parking" required>
+                            <option selected value="">Select</option>
                             <option value="yes">Yes</option>
                             <option value="no">No</option>
                         </select>
+                        <div id="parkingError" class="form-text text-danger"></div>
                     </div>
                     <!-- Market Area -->
                     <div class="form-check mb-3">
-                        <label class="form-check-label" for="MarketArea">
-                            Is there a Market Area?
+                        <label class="form-check-label" for="marketArea">
+                            Is there a Market Area?<span class="text-danger"> *</span>
                         </label>
-                        <select class="form-select" id="MarketArea" required>
-                            <option selected disabled value="">Select</option>
+                        <select class="form-select" id="marketArea" required>
+                            <option selected value="">Select</option>
                             <option value="yes">Yes</option>
                             <option value="no">No</option>
                         </select>
+                        <div id="marketAreaError" class="form-text text-danger"></div>
                     </div>
                 </div>
             </div>
-            <div>
-                <button class="btn-submitProperty">Post Property</button>
+            <div class="mt-4">
+                <button id="btn-submitProperty" class="btn-submitProperty">Post Property</button>
             </div>
         </form>
     </div>
+    <footer id="about-us-section" class="about-us-section">
+        <div class="px-4 py-2">
+            <div class="row justify-content-around g-4">
+                <!-- Column 1: Contact Info -->
+                <div class="col-lg-5 col-md-6">
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt highlight"></i> Location: ITI, Egypt</p>
+                        <p><i class="fas fa-envelope highlight"></i> Email: info@homes.com</p>
+                        <p><i class="fas fa-phone-alt highlight"></i> Phone: +20 100 200 3000</p>
+                    </div>
+                </div>
+                <!-- Column 2: Explore -->
+                <div class="col-lg-2 col-md-6">
+                    <ul class="explore-list">
+                        <li class="explore-item"><i class="fas fa-home highlight"></i> Buy</li>
+                        <li class="explore-item"><i class="fas fa-key highlight"></i> Rent</li>
+                        <li class="explore-item"><i class="fas fa-calendar highlight"></i> Short Term</li>
+                        <li class="explore-item"><i class="fas fa-building highlight"></i> New Projects</li>
+                    </ul>
+                </div>
+                <!-- Column 3: Services -->
+                <div class="col-lg-2 col-md-6">
+                    <ul class="services-list">
+                        <li class="service-item"><i class="fas fa-search highlight"></i> Advanced Property Search</li>
+                        <li class="service-item"><i class="fas fa-file-alt highlight"></i> Detailed Property Descriptions</li>
+                        <li class="service-item"><i class="fas fa-headset highlight"></i> Expert Assistance</li>
+                        <li class="service-item"><i class="fas fa-handshake highlight"></i> Hassle-Free Transactions</li>
+                    </ul>
+                </div>
+                <!-- Column 4: Quick Links -->
+                <div class="col-lg-2 col-md-6">
+                    <ul class="quick-links-list">
+                        <li class="quick-link-item">
+                            <i class="fas fa-home highlight"></i> 
+                            <a href="#home-section" class="quick-link" aria-label="Go to Home Section">Home</a>
+                        </li>
+                        <li class="quick-link-item">
+                            <i class="fas fa-building highlight"></i> 
+                            <a href="#properties-section" class="quick-link" aria-label="Go to Properties Section">Properties</a>
+                        </li>
+                        <li class="quick-link-item">
+                            <i class="fas fa-info-circle highlight"></i> 
+                            <a href="#about-us-section" class="quick-link" aria-label="Go to About Us Section">About Us</a>
+                        </li>
+                        <li class="quick-link-item">
+                            <i class="fas fa-phone-alt highlight"></i> 
+                            <a href="#contact-us-section" class="quick-link" aria-label="Go to Contact Us Section">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="fa-bold text-center copy-right">
+                This project by <strong>Nizar Esmat</strong>, <strong>Tarek Mohamed</strong>, and <strong>Omar Elderwy</strong> for the ITI JS project. 
+                Copyright &copy; 2025 HOMES. All rights reserved.
+            </p>
+        </div>
+    </footer>
 
     <script src="../../modules/propertyForm.js"></script>
 </body>
