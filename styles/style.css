@@ -219,7 +219,6 @@ h6 {
   height: 60px;
   display: flex;
   align-items: center;
-
   justify-content: space-between;
 }
 
@@ -255,7 +254,7 @@ header {
 }
 
 .get-started-btn {
-  background-color: #ec4f4f;
+  background-color: var(--secondry-2);
   color: var(--primary-2);
   padding: 0.5rem 1rem;
   border-radius: var(--radius-large);
