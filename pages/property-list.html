@@ -3,67 +3,58 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../styles/property-list.css">
-        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+        <link rel="stylesheet"
+            href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/property.css">
         <title>Document</title>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Navbar</a>
-                <button class="navbar-toggler" type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse"
-                    id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page"
-                                href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#"
-                                role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Dropdown
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item"
-                                        href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another
-                                        action</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="#">Something
-                                        else here</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled"
-                                aria-disabled="true">Disabled</a>
-                        </li>
-                    </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search"
-                            placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success"
-                            type="submit">Search</button>
-                    </form>
+        <header>
+            <!-- Nav bar -->
+            <nav class="nav-bar">
+                <div class="logo">
+                    <a href="#">
+                        <!-- to be replaced with logo  -->
+                        HOMES
+                    </a>
                 </div>
+
+                <ul class="links" style="margin-bottom:0px;">
+                    <li><a href="#hero-section">HOME</a></li>
+                    <li><a href="./pages/property-list.html">PROPERTIES</a></li>
+                    <li><a href="#about-us-section">ABOUT US</a></li>
+                    <li><a href="#services-section">OUR SERVIECES</a></li>
+                    <li><a href="#contact-us-section">CONTACT US</a></li>
+                </ul>
+                <a href="pages\signUp.html" class="get-started-btn"
+                    id="sign-up">Sign up</a>
+
+                <div class="toggle-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </nav>
+
+            <div class="dropdown-menu">
+                <li><a href="#hero-section">HOME</a></li>
+                <li><a href="property-list.html">PROPERTIES</a></li>
+                <li><a href="#about-us-section">ABOUT US</a></li>
+                <li><a href="#services-section">OUR SERVIECES</a></li>
+                <li><a href="contact-us-section">CONTACT US</a></li>
+                <li><a href="pages\signUp.html" class="get-started-btn">Sign
+                        up</a></li>
+
             </div>
-        </nav>
+
+        </header>
         <div class="container">
-            <div class="property-container mx-auto" style="margin-top: 100px; width: 800px; font-size: larger; font-weight: 400;">
+            <div class="property-container mx-auto"
+                style="margin-top: 100px; width: 800px; font-size: larger; font-weight: 400;">
                 <!-- properties added with js here -->
             </div>
         </div>
         <script type="module" src="../modules/property-list.js"></script>
-        <Script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></Script>
+        <script
+            src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>

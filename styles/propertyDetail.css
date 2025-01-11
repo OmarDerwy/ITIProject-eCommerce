@@ -1,0 +1,15 @@
+#main-image{
+    width: 100%;
+    height: auto;
+}
+#company-logo{
+    width: 64px;
+}
+#features *{
+    list-style: unset;
+    list-style-type: "\2605";
+}
+#product-side-info-container{
+    max-width: 600px;
+}
+#map { height: 180px; }

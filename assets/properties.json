@@ -3,10 +3,13 @@
       "id": "001",
       "type": "Apartment",
       "poster_name": "Jane Smith",
-      "company_logo": "https://example.com/logo1.png",
+      "company_logo": "https://static.vecteezy.com/system/resources/previews/019/073/761/large_2x/matrix-logo-unit-matrix-dummy-company-name-logo-free-vector.jpg",
       "pictures": [
-        "https://picsum.photos/250",
-        "https://picsum.photos/250"
+        "https://picsum.photos/250?random=1",
+        "https://picsum.photos/250?random=2",
+        "https://picsum.photos/250?random=3",
+        "https://picsum.photos/250?random=4",
+        "https://picsum.photos/250?random=5"
       ],
       "features": ["Balcony", "Gym", "Parking"],
       "phone_number": "+201234567890",
@@ -29,9 +32,11 @@
       "poster_name": "Ahmed Ali",
       "company_logo": "https://example.com/logo2.png",
       "pictures": [
-        "https://picsum.photos/250",
-        "https://picsum.photos/250",
-        "https://picsum.photos/250"
+        "https://picsum.photos/250?random=1",
+        "https://picsum.photos/250?random=2",
+        "https://picsum.photos/250?random=3",
+        "https://picsum.photos/250?random=4",
+        "https://picsum.photos/250?random=5"
       ],
       "features": ["Garden", "Swimming Pool", "Garage"],
       "phone_number": "+201112223344",
