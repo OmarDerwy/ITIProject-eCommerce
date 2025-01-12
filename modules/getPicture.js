@@ -4,7 +4,7 @@ export function getPicture () {
     .then(data =>{
         let downloadLinks=[]
         data.forEach(object => {
-            downloadLinks.push(object.links.download)
+            downloadLinks.push(object.urls.small)
         })
         return downloadLinks
     })
