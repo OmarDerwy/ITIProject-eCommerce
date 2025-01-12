@@ -91,42 +91,35 @@
                   <p class="lead">Search through our
                     collection</p>
                   <div class="input-group d-sm-flex ">
-                    <label for="locations">Location</label>
-                    <input name="locations" type="text"
+                    <label for="locations-choice">Location</label>
+                    <input id="location-field" name="locations-choice" type="text"
                       class="form-control"
                       list="locations"
                       placeholder="location">
                     <datalist id="locations">
                       <!--TODO: replace the below selections with a JS injection using the places JSON -->
-                      <option value="Cairo"></option>
-                      <option value="Alexandria"></option>
-                      <option value="Giza"></option>
-                      <option value="Luxor"></option>
-                      <option value="Aswan">></option>
-                      <option value="Hurghada"></option>
-                      <option
-                        value="Sharm El Sheikh"></option>
+
                     </datalist>
                     <label for="bedrooms">No. of
                       bedrooms</label>
-                    <input name="bedrooms" type="number"
+                    <input id="bedrooms-field" name="bedrooms" type="number"
                       class="form-control"
                       placeholder="bedrooms">
                     <label for="bathroons">No. of
                       bathrooms</label>
-                    <input type="number"
+                    <input id="bathrooms-field" name="bathrooms" type="number"
                       class="form-control"
                       placeholder="bathrooms">
                     <label for="place-type">Type of
                       place</label>
-                    <select name="place-type"
+                    <select id="type-field" name="place-type"
                       class="form-control">
                       <option value>type</option>
                       <option
                         value="Apartment">Apartment</option>
                       <option value="Villa">Villa</option>
                       <option
-                        value="Duplex">Duplex</option>
+                        value="Studio">Studio</option>
                       <option
                         value="Chalet">Chalet</option>
                       <option
@@ -134,7 +127,7 @@
                       <option
                         value="Penthouse">Penthouse</option>
                     </select>
-                    <button type="submit"
+                    <button id="search-btn" type="submit"
                       class="btn btn-primary">Search</button>
 
                   </div>
