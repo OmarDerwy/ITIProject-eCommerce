@@ -486,8 +486,8 @@ document.getElementById("btn-submitProperty").addEventListener("click", (e) => {
 
             //add properties again to localStorage
             localStorage.setItem("properties", JSON.stringify(properties));
-            
             alert("Form submitted successfully!");
+            window.location.href = "pages/payment.html";
         } 
     
         else {

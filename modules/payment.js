@@ -20,6 +20,10 @@ paypal.Buttons({
     },
     onError: (err) => {
       console.error('An error occurred:', err);
+      const properties = JSON.parse(localStorage.getItem('properties'));
+      properties.pop();
+      localStorage.setItem("properties", JSON.stringify(properties));
       alert('Payment could not be completed. Please try again.');
+      window.location.href = "../index.html";
     }
   }).render('#paypal-button-container');

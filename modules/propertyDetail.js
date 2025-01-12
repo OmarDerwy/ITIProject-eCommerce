@@ -13,7 +13,9 @@ export function showSelectedProperty(){
         if(index < 5){
             const img = document.createElement('img');
             img.src = image;
-            img.style.height = '80px';                
+            img.style.objectFit = 'cover';
+            img.style.height = '80px';  
+            img.style.width = '80px'              
             img.classList.add('m-1');
             // change image on hover logic
             img.addEventListener('mouseover', () => {
