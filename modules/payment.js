@@ -4,8 +4,8 @@ paypal.Buttons({
         
         purchase_units: [{
           amount: {
-            value: '200.00'
-          }
+            value: '100.00'
+          } 
         }]
       });
     },
@@ -13,6 +13,9 @@ paypal.Buttons({
       return actions.order.capture().then((details) => {
         alert(`Transaction completed by ${details.payer.name.given_name}`);
         console.log(details);
+        if(details.status==="complete"){  
+        window.location.href = "../index.html";
+        }
       });
     },
     onError: (err) => {
@@ -20,4 +23,3 @@ paypal.Buttons({
       alert('Payment could not be completed. Please try again.');
     }
   }).render('#paypal-button-container');
-console.log("payment.js");
