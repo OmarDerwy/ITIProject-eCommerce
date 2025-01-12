@@ -8,7 +8,7 @@ function handleToggleButton() {
 
     if(isOpen){
         toggleBtnIcon.classList = 'fa-solid fa-x';
-        navbar.style = 'margin-bottom:280px;'
+        navbar.style = 'margin-bottom:320px;'
 
     }
     else{
