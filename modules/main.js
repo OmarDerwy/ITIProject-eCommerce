@@ -1,32 +1,39 @@
 import { login } from "./Login.js";
 import { showSelectedProperty } from "./propertyDetail.js";
 import { featuredProperties } from "./featuredProperties.js";
+import { loadPropOntoStorage } from "./loadPropOntoStorage.js"
+
+/* ------------------------------------------------- Load property onto local storage -------------------------------------------------------- */
+if(localStorage.getItem("properties") == null)
+    loadPropOntoStorage();
+
 /* ------------------------------------------------- NAV BAR -------------------------------------------------------- */
 localStorage.setItem('users', JSON.stringify([{"name": "demo", 'password': "demo"}]))
 let isSign=false
 
 window.onload = function () {
-        if(sessionStorage.getItem("user") != null){
-            document.querySelectorAll('.advertise-here').forEach(advertiseHere => {
-                advertiseHere.textContent = "Advertise here!";
-                advertiseHere.href = "/pages/propertyForm.html";
-            });
-            
-            document.querySelectorAll('.sign-btn').forEach(signBtn => {
-                signBtn.textContent = "Logout";
-                signBtn.href = "";
-                signBtn.addEventListener("click", function (e) {
-                    e.preventDefault();
-                    sessionStorage.removeItem("user");
-                    window.open("../index.html", "_self");
-                })
-            });
-        } else {
-            document.querySelectorAll('.advertise-here').forEach(advertiseHere => {
-                advertiseHere.textContent = "Login";
-                advertiseHere.href = "/pages/login.html";
-            }) 
-        }
+    
+    if(sessionStorage.getItem("user") != null){
+        document.querySelectorAll('.advertise-here').forEach(advertiseHere => {
+            advertiseHere.textContent = "Advertise here!";
+            advertiseHere.href = "/pages/propertyForm.html";
+        });
+        
+        document.querySelectorAll('.sign-btn').forEach(signBtn => {
+            signBtn.textContent = "Logout";
+            signBtn.href = "";
+            signBtn.addEventListener("click", function (e) {
+                e.preventDefault();
+                sessionStorage.removeItem("user");
+                window.open("../index.html", "_self");
+            })
+        });
+    } else {
+        document.querySelectorAll('.advertise-here').forEach(advertiseHere => {
+            advertiseHere.textContent = "Login";
+            advertiseHere.href = "/pages/login.html";
+        }) 
+    }
         
     
 }
@@ -58,3 +65,5 @@ if(window.location.pathname == "/pages/login.html")
 /*-------------------------------------------------show product details----------------------------------------------------*/ 
 if(window.location.pathname == "/pages/propertyDetail.html")
     showSelectedProperty();
+
+localStorage.setItem('firstLoad', true); //won't need this, might delete
