@@ -1,10 +1,7 @@
-import fd from "./search.js"
-
-const propertyContainer = document.querySelector(".property-container");
-
-fd().then((properties) => {
-    console.log(properties);
-    properties.forEach((property) => {
+function displayProperties(objectArray){
+    const propertyContainer = document.querySelector(".property-container");
+    console.log(objectArray);
+    objectArray.forEach((property) => {
         const cardContainer = document.createElement("div");
         //create ul element and load it with features
         const features = property.features.map((feature) => `<li class="feature">${feature}</li>`).join('');
@@ -13,7 +10,7 @@ fd().then((properties) => {
         <div class="card my-3">
             <div class="row">
                 <div class="col-12 col-lg-auto">
-                    <img src="${property.pictures[1]}" class="card-img-top img-fluid" alt="...">
+                    <img src="${property.pictures[0]}" class="card-img-top img-fluid" alt="...">
                 </div>
                 <div class="col-12 col-lg">
                     <div class="card-body">
@@ -39,4 +36,4 @@ fd().then((properties) => {
     `
         propertyContainer.appendChild(cardContainer);
     });
-});
+}

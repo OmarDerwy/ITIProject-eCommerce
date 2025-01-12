@@ -36,5 +36,8 @@
     .property-container>div{
         max-width: 800px;
     }
+    .card-img-top{
+        width:250px
+    }
     
 }

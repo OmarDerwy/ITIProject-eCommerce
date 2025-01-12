@@ -43,7 +43,22 @@ const parkingError = document.getElementById("parkingError");
 const marketAreaError = document.getElementById("marketAreaError");
 const uploadImgError = document.getElementById("uploadImgError");
 
+//add map
+var map = L.map('map').setView([51.505, -0.09], 13);
 
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+
+var marker;
+let userLatLng;
+map.on('click', function(e) {
+    if(marker)
+        map.removeLayer(marker);
+    userLatLng = e.latlng 
+    marker = L.marker(e.latlng).addTo(map);
+});
 
 // Function to enable the selection of floor number for only flats 
 floor.disabled = true;
@@ -398,7 +413,6 @@ document.getElementById("btn-submitProperty").addEventListener("click", (e) => {
     const isMarketAreaValid = validateMarketArea();
     const isUploadImgValid = validateUploadImg();
 
-    
     if (
         isStatusValid && 
         isAreaValid && 
@@ -422,13 +436,62 @@ document.getElementById("btn-submitProperty").addEventListener("click", (e) => {
         isParkingValid &&
         isMarketAreaValid &&
         isUploadImgValid
-    ) 
-        alert("Form submitted successfully!");
+        ) 
+        {   
+            e.preventDefault(); // Prevent default form submission
+            let obj = {};
+            
+            obj["adTitle"] = adTitle.value;
+            obj["poster_name"] = sessionStorage.getItem('user')
+            obj["propertyPrice"] = propertyPrice.value;
+            obj["depositePrice"] = depositePrice.value;
+            obj["location"] = `${city.value}, ${state.value}`;
+            obj["type"] = propertyType.value;
+            obj["floor"] = floor.value;
+            obj["no_of_bathrooms"] = bathrooms.value;
+            obj["no_of_bedrooms"] = bedrooms.value;
+            obj["propertyStatus"] = propertyStatus.value;
+            obj["size"] = propertyArea.value;
+            obj["propertyDescription"] = propertyDescription.value;
+            obj["furnishingStatus"] = furnishingStatus.value;
+            obj["pictures"] = [];
+            obj["features"] = [];
+            const coordinates = {
+                latitude: userLatLng.lat,
+                longitude: userLatLng.lng
+            }
+            obj["map_coordinates"] = coordinates
+
+            // Features to check
+            let features = ["lift", "garden", "security", "gym", "parking", "marketArea"];
+
+            // Loop through the features and add them to the selectedFeatures array if checked
+            for (let i = 0; i < features.length; i++) {
+                let feature = document.getElementById(features[i]);
+                if (feature && feature.value === "yes") {
+                    obj["features"].push(features[i]);
+                }
+            }
+
+            // images
+            if (uploadImg.files.length > 0) 
+            {
+                for (let i = 0; i < uploadImg.files.length; i++) 
+                    obj["pictures"].push("https://picsum.photos/200");
+            }
+            //extract properties from localStorage
+            const properties = JSON.parse(localStorage.getItem('properties'));
+            obj['id'] = String(Object.keys(properties).length + 1).padStart(3,'0')
+            properties.push(obj)
+
+            //add properties again to localStorage
+            localStorage.setItem("properties", JSON.stringify(properties));
+            
+            alert("Form submitted successfully!");
+        } 
     
-    else 
-    {
+        else {
         e.preventDefault();
         alert("Please fill the required fields before submission");
     }
-    
 });

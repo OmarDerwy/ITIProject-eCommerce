@@ -18,20 +18,24 @@
     <!-- link to css -->
     <link href="../styles/style.css" rel="stylesheet">
     <link href="../styles/propertyForm.css " rel="stylesheet">
+    <!-- link to leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
 
 </head>
 <body>
     <script id="replace_with_navbar" src="../modules/nav.js"></script>
     
     <div class="postProperty-container">
-        <form action="">
+        <form id="propertyForm" action="">
             <div class="mb-5">
                 <h3>Property Details</h3>
             </div>
 
             <!-- Ad name -->
             <div class="input-group mb-3">
-                <label for="adTitle">Ad Tilte<span class="text-danger"> *</span></label>
+                <label for="adTitle">Ad Title<span class="text-danger"> *</span></label>
                 <input  type="text" 
                         class="form-control" 
                         placeholder="Enter Ad Tilte" 
@@ -210,7 +214,9 @@
                             rows="3"></textarea>
                 <div id="propertyDescriptionError" class="form-text text-danger"></div>
             </div>
-
+            <hr class="my-4">
+            <h3>Choose Location on Map</h3>
+            <div id="map"></div>
             <hr class="my-4">
             <!-- ........................................................................................... -->
             <!-- checklist for specs -->
@@ -300,6 +306,9 @@
     </div>
     <script id="replace_with_footer" src="../modules/footer.js"></script>
     <script type="module" src="../modules/main.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
     <script src="../modules/propertyForm.js"></script>
     <script src="../modules/onclick.js"></script>
 </body>
