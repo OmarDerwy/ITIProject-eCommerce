@@ -7,7 +7,9 @@ if(localStorage.getItem("properties") == null)
     loadPropOntoStorage();
 
 /* ------------------------------------------------- NAV BAR -------------------------------------------------------- */
-localStorage.setItem('users', JSON.stringify([{"name": "demo", 'password': "demo"}]))
+if(localStorage.getItem('users') == null){
+    localStorage.setItem('users', JSON.stringify([{"name": "demo", 'password': "demo"}]))
+}
 let isSign=false
 
 window.onload = function () {
