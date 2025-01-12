@@ -426,6 +426,7 @@ document.getElementById("btn-submitProperty").addEventListener("click", (e) => {
             e.preventDefault(); // Prevent default form submission
             let obj = {};
             obj["adTitle"] = adTitle.value;
+            obj["poster_name"] = sessionStorage.getItem('user')
             obj["propertyPrice"] = propertyPrice.value;
             obj["depositePrice"] = depositePrice.value;
             obj["location"] = `${city.value}, ${state.value}`;
@@ -457,9 +458,14 @@ document.getElementById("btn-submitProperty").addEventListener("click", (e) => {
                 for (let i = 0; i < uploadImg.files.length; i++) 
                     obj["pictures"].push("https://picsum.photos/200");
             }
+            //extract properties from localStorage
+            const properties = JSON.parse(localStorage.getItem('properties'));
+            obj['id'] = String(Object.keys(properties).length + 1).padStart(3,'0')
+            properties.push(obj)
 
-            console.log(obj);
-
+            //add properties again to localStorage
+            localStorage.setItem("properties", JSON.stringify(properties));
+            
             alert("Form submitted successfully!");
         } 
     

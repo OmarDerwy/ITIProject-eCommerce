@@ -10,7 +10,7 @@ function displayProperties(objectArray){
         <div class="card my-3">
             <div class="row">
                 <div class="col-12 col-lg-auto">
-                    <img src="${property.pictures[1]}" class="card-img-top img-fluid" alt="...">
+                    <img src="${property.pictures[0]}" class="card-img-top img-fluid" alt="...">
                 </div>
                 <div class="col-12 col-lg">
                     <div class="card-body">
