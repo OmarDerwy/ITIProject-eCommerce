@@ -43,20 +43,69 @@ window.onload = function () {
 
 if(window.location.pathname == "/" || window.location.pathname == "/index.html"){
     /* ------------------------------------------------- Search Bar ---------------------------------------------------- */
-        document.querySelector('#search-btn').addEventListener("click", function (e) {
+    //validate bedroom and bathroom numbers
+    const bedroomField = document.querySelector('#bedrooms-field');
+    const bathroomField = document.querySelector('#bathrooms-field');
+    var invalidChars = [
+        "-",
+        "+",
+        "e",
+      ];
+    bedroomField.addEventListener("input", function (e) {
+        if (e.target.value < 0 || e.target.value > 7) {
+            e.target.value = 0;
+        }
+    })
+    bedroomField.addEventListener("keydown", function (e) {
+        if (invalidChars.includes(e.key)) {
             e.preventDefault();
-            const locationInput = document.querySelector('#location-field').value;
-            const bedroomsInput = document.querySelector('#bedrooms-field').value;
-            const bathroomsInput = document.querySelector('#bathrooms-field').value;
-            const typeInput = document.querySelector('#type-field').value;
-            const searchParams = new URLSearchParams({
-                location: locationInput,
-                bedrooms: bedroomsInput,
-                bathrooms: bathroomsInput,
-                type: typeInput
-            });
-            window.open(`./pages/property-list.html?${searchParams.toString()}`, '_self');
-        })
+        }
+    })
+    bathroomField.addEventListener("input", function (e) {
+        if (e.target.value < 0 || e.target.value > 7) {
+            e.target.value = 0;
+        }
+    })
+    bathroomField.addEventListener("keydown", function (e) {
+        if (invalidChars.includes(e.key)) {
+            e.preventDefault();
+        }
+    })
+    //populate with options
+    const properties = JSON.parse(localStorage.getItem('properties'));
+    const locationDatalist = document.querySelector('#locations');
+    let locationSet = new Set();
+    let typeSet = new Set();
+    const typeField = document.querySelector('#type-field');
+    properties.forEach((property) => {
+        locationSet.add(property.location);
+        typeSet.add(property.type);
+    })
+    locationSet.forEach((location) => {
+        const option = document.createElement('option');
+        option.value = location;
+        locationDatalist.appendChild(option);
+    })
+    typeSet.forEach((type) => {
+        const option = document.createElement('option');
+        option.value = type;
+        option.textContent= type;
+        typeField.appendChild(option);
+    })
+    document.querySelector('#search-btn').addEventListener("click", function (e) {
+        e.preventDefault();
+        const locationInput = document.querySelector('#location-field').value;
+        const bedroomsInput = document.querySelector('#bedrooms-field').value;
+        const bathroomsInput = document.querySelector('#bathrooms-field').value;
+        const typeInput = document.querySelector('#type-field').value;
+        const searchParams = new URLSearchParams({
+            location: locationInput,
+            bedrooms: bedroomsInput,
+            bathrooms: bathroomsInput,
+            type: typeInput
+        });
+        window.open(`./pages/property-list.html?${searchParams.toString()}`, '_self');
+    })
     
     /* ------------------------------------------------- Featured property---------------------------------------------------- */
     // load carousel with JSON data
