@@ -398,7 +398,6 @@ document.getElementById("btn-submitProperty").addEventListener("click", (e) => {
     const isMarketAreaValid = validateMarketArea();
     const isUploadImgValid = validateUploadImg();
 
-    
     if (
         isStatusValid && 
         isAreaValid && 
@@ -422,13 +421,50 @@ document.getElementById("btn-submitProperty").addEventListener("click", (e) => {
         isParkingValid &&
         isMarketAreaValid &&
         isUploadImgValid
-    ) 
-        alert("Form submitted successfully!");
+        ) 
+        {   
+            e.preventDefault(); // Prevent default form submission
+            let obj = {};
+            obj["adTitle"] = adTitle.value;
+            obj["propertyPrice"] = propertyPrice.value;
+            obj["depositePrice"] = depositePrice.value;
+            obj["location"] = `${city.value}, ${state.value}`;
+            obj["type"] = propertyType.value;
+            obj["floor"] = floor.value;
+            obj["no_of_bathrooms"] = bathrooms.value;
+            obj["no_of_bedrooms"] = bedrooms.value;
+            obj["propertyStatus"] = propertyStatus.value;
+            obj["size"] = propertyArea.value;
+            obj["propertyDescription"] = propertyDescription.value;
+            obj["furnishingStatus"] = furnishingStatus.value;
+            obj["pictures"] = [];
+            obj["features"] = [];
+
+            // Features to check
+            let features = ["lift", "garden", "security", "gym", "parking", "marketArea"];
+
+            // Loop through the features and add them to the selectedFeatures array if checked
+            for (let i = 0; i < features.length; i++) {
+                let feature = document.getElementById(features[i]);
+                if (feature && feature.value === "yes") {
+                    obj["features"].push(features[i]);
+                }
+            }
+
+            // images
+            if (uploadImg.files.length > 0) 
+            {
+                for (let i = 0; i < uploadImg.files.length; i++) 
+                    obj["pictures"].push("https://picsum.photos/200");
+            }
+
+            console.log(obj);
+
+            alert("Form submitted successfully!");
+        } 
     
-    else 
-    {
+        else {
         e.preventDefault();
         alert("Please fill the required fields before submission");
     }
-    
 });
