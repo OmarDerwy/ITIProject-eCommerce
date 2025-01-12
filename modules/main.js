@@ -1,8 +1,7 @@
 import { login } from "./Login.js";
 import { showSelectedProperty } from "./propertyDetail.js";
 import { featuredProperties } from "./featuredProperties.js";
-import { loadPropOntoStorage } from "./loadPropOntoStorage.js"
-
+import { loadPropOntoStorage } from "./loadPropOntoStorage.js";
 /* ------------------------------------------------- Load property onto local storage -------------------------------------------------------- */
 if(localStorage.getItem("properties") == null)
     loadPropOntoStorage();
@@ -39,13 +38,28 @@ window.onload = function () {
 }
 
 
-/* ------------------------------------------------- HERO SECTION ---------------------------------------------------- */
 
-
-/* ------------------------------------------------- Featured property---------------------------------------------------- */
-// load carousel with JSON data
-if(window.location.pathname == "/" || window.location.pathname == "/index.html")
+if(window.location.pathname == "/" || window.location.pathname == "/index.html"){
+    /* ------------------------------------------------- Search Bar ---------------------------------------------------- */
+        document.querySelector('#search-btn').addEventListener("click", function (e) {
+            e.preventDefault();
+            const locationInput = document.querySelector('#location-field').value;
+            const bedroomsInput = document.querySelector('#bedrooms-field').value;
+            const bathroomsInput = document.querySelector('#bathrooms-field').value;
+            const typeInput = document.querySelector('#type-field').value;
+            const searchParams = new URLSearchParams({
+                location: locationInput,
+                bedrooms: bedroomsInput,
+                bathrooms: bathroomsInput,
+                type: typeInput
+            });
+            window.open(`./pages/property-list.html?${searchParams.toString()}`, '_self');
+        })
+    
+    /* ------------------------------------------------- Featured property---------------------------------------------------- */
+    // load carousel with JSON data
     featuredProperties();
+}
 
 /*-------------------------------------------------- sign up validation ----------------------------------------*/ 
 /*-------------------------------------------------Log in----------------------------------------------------*/ 

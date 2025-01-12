@@ -1,23 +1,19 @@
-export default function filterData(locationData='', BathroomsData='', bedroomsData='', typeData='') {
-  return fetch("../assets/properties.json")
-    .then((res) => res.json())
-    .then((data) => {
-      console.log("🚀 ~ .then ~ data:", data);
-      return data.filter((item) => {
-        return (
-          (BathroomsData === "" || BathroomsData == item.no_of_bathrooms) &&
-          (bedroomsData === "" || bedroomsData == item.no_of_bedrooms) &&
-          (locationData === "" || item.location.includes(locationData)) &&
-          (typeData === "" || typeData == item.type)
-        );
-      });
-      
-      // return filteredData;
-    })
-    .catch((err) => {
-      console.error("Error fetching data:", err);
-      container = [];
-    });
+function filterData() {
+  //get search params
+  const params = new URLSearchParams(window.location.search);
+  const locationData = params.get("location");
+  const typeData = params.get("type");
+  const bedroomsData = params.get("bedrooms");
+  const BathroomsData = params.get("bathrooms");
 
+  const data = JSON.parse(localStorage.getItem("properties"));
+  return data.filter((item) => {
+    return (
+      (BathroomsData === "" || BathroomsData === null || BathroomsData == item.no_of_bathrooms) &&
+      (bedroomsData === "" || bedroomsData === null || bedroomsData == item.no_of_bedrooms) &&
+      (locationData === "" || locationData === null || item.location.includes(locationData)) &&
+      (typeData === "" || typeData === null || typeData == item.type)
+    );
+  });
 }
 
