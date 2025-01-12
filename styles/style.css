@@ -230,9 +230,9 @@ h6 {
   font-family: var(--logo-font-family);
 }
 
-.nav-bar a:hover {
+/* .nav-bar a:hover {
   color: var(--secondry-2);
-}
+} */
 
 .links {
   display: flex;
@@ -374,7 +374,7 @@ header {
     display: none;
   }
   #hero-section{
-    background-image: url(assets/example.png);
+    background-image: url(../assets/example.png);
     background-size: cover;
     background-position: -193px -208px;
     background-repeat: no-repeat;
