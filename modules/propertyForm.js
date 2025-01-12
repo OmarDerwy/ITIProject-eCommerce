@@ -43,7 +43,22 @@ const parkingError = document.getElementById("parkingError");
 const marketAreaError = document.getElementById("marketAreaError");
 const uploadImgError = document.getElementById("uploadImgError");
 
+//add map
+var map = L.map('map').setView([51.505, -0.09], 13);
 
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+
+var marker;
+let userLatLng;
+map.on('click', function(e) {
+    if(marker)
+        map.removeLayer(marker);
+    userLatLng = e.latlng 
+    marker = L.marker(e.latlng).addTo(map);
+});
 
 // Function to enable the selection of floor number for only flats 
 floor.disabled = true;
@@ -425,6 +440,7 @@ document.getElementById("btn-submitProperty").addEventListener("click", (e) => {
         {   
             e.preventDefault(); // Prevent default form submission
             let obj = {};
+            
             obj["adTitle"] = adTitle.value;
             obj["poster_name"] = sessionStorage.getItem('user')
             obj["propertyPrice"] = propertyPrice.value;
@@ -440,6 +456,11 @@ document.getElementById("btn-submitProperty").addEventListener("click", (e) => {
             obj["furnishingStatus"] = furnishingStatus.value;
             obj["pictures"] = [];
             obj["features"] = [];
+            const coordinates = {
+                latitude: userLatLng.lat,
+                longitude: userLatLng.lng
+            }
+            obj["map_coordinates"] = coordinates
 
             // Features to check
             let features = ["lift", "garden", "security", "gym", "parking", "marketArea"];

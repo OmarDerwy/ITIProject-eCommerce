@@ -63,6 +63,7 @@
     width: 100%;
     text-align: left;
 }
+#map { height: 400px; }
 
 @media (max-width: 668px) {
     .login-container {
