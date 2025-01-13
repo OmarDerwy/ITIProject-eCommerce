@@ -110,6 +110,20 @@ if(window.location.pathname == "/" || window.location.pathname == "/index.html")
     /* ------------------------------------------------- Featured property---------------------------------------------------- */
     // load carousel with JSON data
     featuredProperties();
+
+    //newsletter email regex validation
+    //newsletter
+    document.querySelector('#subscribe').addEventListener("click", (e) => {
+        const input = document.querySelector('#subscribe-input')
+        if(!/^\S+@\S+\.\S+$/.test(input.value)){
+            e.preventDefault();
+            alert("Please enter a valid email address");
+        } else {
+            e.preventDefault();
+            alert("You have successfully subscribed to our newsletter!");
+        }
+        
+    });
 }
 
 /*-------------------------------------------------- sign up validation ----------------------------------------*/ 
