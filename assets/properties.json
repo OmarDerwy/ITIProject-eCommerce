@@ -2,6 +2,7 @@
     {
       "id": "001",
       "type": "Apartment",
+      "price": "1200000",
       "poster_name": "Jane Smith",
       "company_logo": "https://static.vecteezy.com/system/resources/previews/019/073/761/large_2x/matrix-logo-unit-matrix-dummy-company-name-logo-free-vector.jpg",
       "pictures": [
@@ -29,6 +30,7 @@
     {
       "id": "002",
       "type": "Villa",
+      "price": "1500000",
       "poster_name": "Ahmed Ali",
       "company_logo": "https://img.freepik.com/free-vector/gradient-hub-logo-template_23-2149847151.jpg?ga=GA1.1.1832847824.1736615819&semt=ais_hybrid",
       "pictures": [
@@ -56,6 +58,7 @@
     {
       "id": "003",
       "type": "Studio",
+      "price": "800000",
       "poster_name": "Emily Johnson",
       "company_logo": "https://dummyjson.com/icon/123",
       "pictures": [
@@ -83,6 +86,7 @@
     {
       "id": "004",
       "type": "Townhouse",
+      "price": "1200000",
       "poster_name": "Michael Brown",
       "company_logo": "https://dummyjson.com/icon/124",
       "pictures": [
@@ -110,6 +114,7 @@
     {
       "id": "005",
       "type": "Penthouse",
+      "price": "1700000",
       "poster_name": "Sophia Wilson",
       "company_logo": "https://dummyjson.com/icon/125",
       "pictures": [
@@ -137,6 +142,7 @@
     {
       "id": "006",
       "type": "Office Space",
+      "price": "900000",
       "poster_name": "David Lee",
       "company_logo": "https://dummyjson.com/icon/127",
       "pictures": [
@@ -164,6 +170,7 @@
     {
       "id": "007",
       "type": "Apartment",
+      "price": "1100000",
       "poster_name": "Olivia Martinez",
       "company_logo": "https://dummyjson.com/icon/128",
       "pictures": [
@@ -191,6 +198,7 @@
     {
       "id": "008",
       "type": "Retail Space",
+      "price": "900000",
       "poster_name": "Emma Garcia",
       "company_logo": "https://dummyjson.com/icon/129",
       "pictures": [
@@ -218,6 +226,7 @@
     {
       "id": "009",
       "type": "Villa",
+      "price": "1200000",
       "poster_name": "Liam White",
       "company_logo": "https://dummyjson.com/icon/130",
       "pictures": [
@@ -245,6 +254,7 @@
     {
       "id": "010",
       "type": "Penthouse",
+      "price": "1500000",
       "poster_name": "Sophia Williams",
       "company_logo": "https://dummyjson.com/icon/131",
       "pictures": [
