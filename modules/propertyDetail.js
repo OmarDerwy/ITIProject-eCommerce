@@ -37,6 +37,8 @@ export function showSelectedProperty(){
 
     const featuresElement = document.getElementById('features');
 
+    document.getElementById('property-price').textContent = `$${parseInt(selectedProperty.price).toLocaleString('en-US')}`
+
     selectedProperty.features.forEach(feature => {
         const li = document.createElement('li');
         li.textContent = feature;

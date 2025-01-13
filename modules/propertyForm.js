@@ -443,7 +443,7 @@ document.getElementById("btn-submitProperty").addEventListener("click", (e) => {
             
             obj["adTitle"] = adTitle.value;
             obj["poster_name"] = sessionStorage.getItem('user')
-            obj["propertyPrice"] = propertyPrice.value;
+            obj["price"] = propertyPrice.value;
             obj["depositePrice"] = depositePrice.value;
             obj["location"] = `${city.value}, ${state.value}`;
             obj["type"] = propertyType.value;

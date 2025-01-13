@@ -17,6 +17,9 @@
     list-style: unset;
     list-style-type: "\2605";
 }
+#property-price{
+    font-size: 2rem;
+}
 #product-side-info-container{
     max-width: 600px;
 }
